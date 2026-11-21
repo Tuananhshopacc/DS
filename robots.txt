@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://tuananhshopacc.github.io/DS/sitemap.xml
