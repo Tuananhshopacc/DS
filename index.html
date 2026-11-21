@@ -1,0 +1,3813 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <!-- Chống lưu cache trên Zalo, TikTok Webview và mọi trình duyệt -->
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+
+  <!-- TỐI ƯU SEO GOOGLE & MẠNG XÃ HỘI CHO TUANANHSHOPACC - SHOP ACC BLOCKMAN GO -->
+  <meta name="google-site-verification" id="meta-gsc" content="" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <link rel="canonical" href="https://tuananhshopacc.github.io/DS/" />
+  <meta name="author" content="TuanAnhShopAcc - Tuấn Anh Blockman GO" />
+  <meta name="description" id="meta-desc" content="TuanAnhShopAcc (tuananhshopacc) - Tuấn Anh Blockman GO chuyên Shop Acc Blockman GO (Bed Wars, Sky Block, Jailbreak, Gcubes, Skin VIP) uy tín, trắng thông tin 100%, giao dịch nhanh 1s qua Zalo 0374132655 & TikTok @tuananhdepzaiff." />
+  <meta name="keywords" id="meta-keys" content="tuananhshopacc, TuanAnhShopAcc, Tuấn Anh Shop Acc, Tuấn Anh Blockman GO, shop acc blockman go, mua acc bed wars, acc sky block giá rẻ, acc jailbreak, nạp gcubes, tuananhdepzaiff, 0374132655" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="TuanAnhShopAcc" />
+  <meta property="og:url" content="https://tuananhshopacc.github.io/DS/" />
+  <meta property="og:title" id="og-title" content="TuanAnhShopAcc - Tuấn Anh Blockman GO | Kho Acc Bed Wars, Sky Block, VIP Uy Tín 24/7" />
+  <meta property="og:description" content="TuanAnhShopAcc (tuananhshopacc) cập nhật kho Acc Blockman GO mới nhất theo thời gian thực. Ảnh gốc siêu nét, bảo hành 100%, hỗ trợ Zalo 0374132655." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="TuanAnhShopAcc - Tuấn Anh Blockman GO | Kho Acc Game Uy Tín 24/7" />
+  <meta name="twitter:description" content="TuanAnhShopAcc (tuananhshopacc) - Kho Acc Blockman GO Bed Wars, Sky Block, Jailbreak, Skin VIP trắng thông tin 100%." />
+
+  <title id="page-title">TuanAnhShopAcc - TUẤN ANH BLOCKMAN GO | Kho Acc Game Uy Tín 24/7</title>
+
+  <!-- Dữ liệu có cấu trúc Schema.org giúp Google ưu tiên xếp hạng tìm kiếm -->
+  <script type="application/ld+json" id="schema-seo">
+  {
+    "@context": "https://schema.org",
+    "@type": "Store",
+    "name": "TuanAnhShopAcc - TUẤN ANH BLOCKMAN GO",
+    "alternateName": ["tuananhshopacc", "TuanAnhShopAcc", "Tuấn Anh Shop Acc", "Tuấn Anh Blockman GO"],
+    "url": "https://tuananhshopacc.github.io/DS/",
+    "telephone": "0374132655",
+    "sameAs": [
+      "https://zalo.me/0374132655",
+      "https://www.tiktok.com/@tuananhdepzaiff",
+      "https://tuananhshopacc.github.io/DS/"
+    ],
+    "description": "TuanAnhShopAcc (tuananhshopacc) - Hệ thống cung cấp tài khoản game Blockman GO (Bed Wars, Sky Block, Jailbreak, Skin VIP, Gcubes) trắng thông tin uy tín 100%.",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "reviewCount": "1680"
+    }
+  }
+  </script>
+
+  <!-- Font Inter & Three.js r128 cho đồ họa 3D Voxel thời gian thực -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+  <style>
+    :root {
+      --bg-dark: #060b17;
+      --bg-bar: #0b1326;
+      --bg-card: #101c38;
+      --emerald: #10b981;
+      --emerald-bright: #34d399;
+      --cyan: #00e5ff;
+      --gold: #fbbf24;
+      --gold-dark: #d97706;
+      --tiktok: #fe2c55;
+      --tiktok-cyan: #25f4ee;
+      --zalo: #0068ff;
+      --text-main: #ffffff;
+      --text-sub: #94a3b8;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* ================= 1. NỀN 3D VOXEL BLOCKMAN GO ================= */
+    #voxel-3d-stage {
+      position: fixed;
+      inset: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 0;
+      background: radial-gradient(circle at 50% 38%, #0d2142 0%, #060b17 65%, #03060f 100%);
+      overflow: hidden;
+    }
+
+    #voxel-3d-canvas {
+      width: 100%;
+      height: 100%;
+      display: block;
+      cursor: grab;
+    }
+
+    #voxel-3d-canvas:active {
+      cursor: grabbing;
+    }
+
+    .top-live-bar,
+    .header-bar,
+    .menu-tabs,
+    .wrapper {
+      position: relative;
+      z-index: 2;
+    }
+
+    /* ================= 2. INTRO 3S ĐẦU TRANG ================= */
+    #intro-screen {
+      position: fixed;
+      inset: 0;
+      background: radial-gradient(circle at center, #10254a 0%, #050914 100%);
+      z-index: 99999;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: opacity 0.45s ease, visibility 0.45s ease;
+      cursor: pointer;
+    }
+
+    #intro-screen.hide {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    #intro-video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.48;
+      display: none;
+    }
+
+    .intro-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      padding: 0 16px;
+      animation: popVoxel 3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    @keyframes popVoxel {
+      0% { transform: scale(0.72) translateY(22px); opacity: 0; }
+      22% { transform: scale(1) translateY(0); opacity: 1; }
+      85% { transform: scale(1.03); opacity: 1; }
+      100% { transform: scale(1.12); opacity: 0; }
+    }
+
+    .intro-cube-box {
+      width: 72px;
+      height: 72px;
+      margin: 0 auto 14px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, rgba(16, 185, 129, 0.25), rgba(0, 229, 255, 0.2));
+      border: 2px solid var(--emerald);
+      display: grid;
+      place-items: center;
+      font-size: 2.2rem;
+      box-shadow: 0 0 32px rgba(16, 185, 129, 0.55), inset 0 0 14px rgba(0, 229, 255, 0.3);
+    }
+
+    .intro-progress {
+      width: 240px;
+      height: 5px;
+      background: rgba(255, 255, 255, 0.12);
+      border-radius: 99px;
+      margin: 18px auto 0;
+      overflow: hidden;
+    }
+
+    .intro-progress::after {
+      content: "";
+      display: block;
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, var(--emerald), var(--cyan), var(--gold), var(--tiktok));
+      animation: fillProgress 2.8s linear forwards;
+    }
+
+    @keyframes fillProgress {
+      to { width: 100%; }
+    }
+
+    /* ================= 3. THANH LIVE 24/7 ================= */
+    .top-live-bar {
+      background: rgba(6, 11, 23, 0.84);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(16, 185, 129, 0.2);
+      padding: 7px 2.5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.75rem;
+      gap: 12px;
+    }
+
+    .live-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      overflow: hidden;
+      flex: 1;
+    }
+
+    .live-badge {
+      background: rgba(16, 185, 129, 0.18);
+      border: 1px solid var(--emerald);
+      color: var(--emerald-bright);
+      font-weight: 800;
+      font-size: 0.68rem;
+      padding: 2px 9px;
+      border-radius: 99px;
+      white-space: nowrap;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .live-badge::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--emerald-bright);
+      box-shadow: 0 0 8px var(--emerald-bright);
+    }
+
+    .ticker-viewport {
+      overflow: hidden;
+      white-space: nowrap;
+      flex: 1;
+    }
+
+    .ticker-track {
+      display: inline-block;
+      color: #cbd5e1;
+      animation: tickerMove 24s linear infinite;
+    }
+
+    @keyframes tickerMove {
+      0% { transform: translateX(8%); }
+      100% { transform: translateX(-100%); }
+    }
+
+    .live-right {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      white-space: nowrap;
+      font-weight: 700;
+    }
+
+    .live-right a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .live-right a:hover {
+      color: var(--cyan);
+    }
+
+    @media (max-width: 720px) {
+      .live-right {
+        display: none;
+      }
+    }
+
+    /* ================= 4. HEADER LOGO, ZALO, TIKTOK & ADMIN ================= */
+    .header-bar {
+      background: rgba(11, 19, 38, 0.8);
+      backdrop-filter: blur(12px);
+      padding: 12px 3.5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .brand-wrap {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .voxel-logo-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, rgba(16, 185, 129, 0.22), rgba(0, 229, 255, 0.16));
+      border: 1.5px solid var(--emerald);
+      display: grid;
+      place-items: center;
+      font-size: 1.35rem;
+      box-shadow: 0 0 18px rgba(16, 185, 129, 0.35);
+      flex-shrink: 0;
+    }
+
+    .brand-title-line {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      flex-wrap: wrap;
+    }
+
+    .brand-main-name {
+      font-size: 1.18rem;
+      font-weight: 900;
+      letter-spacing: 0.4px;
+      color: #fff;
+    }
+
+    .brand-gold-tag {
+      background: linear-gradient(135deg, #fbbf24, #d97706);
+      color: #000;
+      font-size: 0.64rem;
+      font-weight: 900;
+      padding: 3px 8px;
+      border-radius: 6px;
+      text-transform: uppercase;
+    }
+
+    .brand-sub-domain {
+      font-size: 0.72rem;
+      color: var(--emerald-bright);
+      margin-top: 2px;
+    }
+
+    .header-right-tools {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .btn-zalo-top {
+      background: linear-gradient(135deg, #00e5ff, #0068ff);
+      color: #fff;
+      font-weight: 800;
+      font-size: 0.78rem;
+      padding: 8px 13px;
+      border-radius: 10px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      box-shadow: 0 4px 14px rgba(0, 104, 255, 0.35);
+      transition: transform 0.18s ease;
+    }
+
+    .btn-tiktok-top {
+      background: linear-gradient(135deg, #fe2c55, #d90429);
+      color: #fff;
+      font-weight: 800;
+      font-size: 0.78rem;
+      padding: 8px 13px;
+      border-radius: 10px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      box-shadow: 0 4px 14px rgba(254, 44, 85, 0.38);
+      transition: transform 0.18s ease;
+    }
+
+    .btn-zalo-top:hover,
+    .btn-tiktok-top:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-adm-open {
+      background: rgba(0, 229, 255, 0.12);
+      border: 1px solid var(--cyan);
+      color: var(--cyan);
+      font-weight: 800;
+      font-size: 0.78rem;
+      padding: 8px 12px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .btn-adm-open:hover {
+      background: rgba(0, 229, 255, 0.22);
+    }
+
+    /* ================= 5. MENU ĐIỀU HƯỚNG DÍNH ================= */
+    .menu-tabs {
+      background: rgba(11, 19, 38, 0.82);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(16, 185, 129, 0.2);
+      display: flex;
+      justify-content: center;
+      gap: 28px;
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 8px 10px 0;
+      border-radius: 0 0 16px 16px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .tab-link {
+      color: var(--text-sub);
+      text-decoration: none;
+      font-size: 0.84rem;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      padding: 8px 18px 11px;
+      border-bottom: 2.5px solid transparent;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .tab-link.active,
+    .tab-link:hover {
+      color: var(--emerald-bright);
+      border-bottom-color: var(--emerald);
+    }
+
+    /* ================= 6. WRAPPER & HUD 3D VOXEL ================= */
+    .wrapper {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 18px 3% 85px;
+    }
+
+    .voxel-hud-panel {
+      background: linear-gradient(135deg, rgba(11, 19, 38, 0.86), rgba(16, 28, 56, 0.74));
+      border: 1px solid rgba(16, 185, 129, 0.45);
+      box-shadow: 0 0 28px rgba(16, 185, 129, 0.16), inset 0 0 18px rgba(0, 229, 255, 0.08);
+      backdrop-filter: blur(12px);
+      border-radius: 16px;
+      padding: 12px 16px;
+      margin-bottom: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .voxel-hud-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .voxel-hud-title {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.84rem;
+      font-weight: 900;
+      color: var(--emerald-bright);
+      letter-spacing: 0.4px;
+      text-transform: uppercase;
+    }
+
+    .voxel-target-badge {
+      font-size: 0.73rem;
+      color: var(--gold);
+      font-weight: 700;
+      background: rgba(251, 191, 36, 0.12);
+      border: 1px solid rgba(251, 191, 36, 0.35);
+      padding: 3px 10px;
+      border-radius: 99px;
+    }
+
+    .voxel-cam-btns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      align-items: center;
+    }
+
+    .btn-voxel-cam {
+      background: rgba(6, 11, 23, 0.84);
+      border: 1px solid rgba(0, 229, 255, 0.32);
+      color: #e2e8f0;
+      font-size: 0.74rem;
+      font-weight: 800;
+      padding: 6px 12px;
+      border-radius: 99px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .btn-voxel-cam:hover,
+    .btn-voxel-cam.active {
+      background: linear-gradient(135deg, rgba(16, 185, 129, 0.32), rgba(0, 229, 255, 0.25));
+      border-color: var(--emerald-bright);
+      color: #fff;
+      box-shadow: 0 0 14px rgba(16, 185, 129, 0.4);
+      transform: translateY(-1px);
+    }
+
+    .btn-voxel-fullscreen {
+      background: linear-gradient(135deg, #fbbf24, #d97706);
+      border: none;
+      color: #000;
+      font-size: 0.74rem;
+      font-weight: 900;
+      padding: 6px 13px;
+      border-radius: 99px;
+      cursor: pointer;
+      box-shadow: 0 0 16px rgba(251, 191, 36, 0.45);
+      margin-left: auto;
+    }
+
+    /* Chế độ ngắm thế giới Blockman GO 3D toàn màn hình */
+    body.pure-3d-mode .top-live-bar,
+    body.pure-3d-mode .header-bar,
+    body.pure-3d-mode .menu-tabs,
+    body.pure-3d-mode .hero-banner-box,
+    body.pure-3d-mode .social-promo-box,
+    body.pure-3d-mode #kho-acc-sec,
+    body.pure-3d-mode .filter-bar,
+    body.pure-3d-mode #acc-grid-box,
+    body.pure-3d-mode #review-sec,
+    body.pure-3d-mode .review-layout {
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.35s ease;
+    }
+
+    body.pure-3d-mode #voxel-3d-stage {
+      z-index: 50;
+    }
+
+    body.pure-3d-mode .voxel-hud-panel {
+      position: fixed;
+      top: 14px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: min(94vw, 980px);
+      z-index: 120;
+      background: rgba(6, 11, 23, 0.9);
+      border-color: var(--gold);
+    }
+
+    /* ================= 7. HERO BANNER BLOCKMAN GO ================= */
+    .hero-banner-box {
+      position: relative;
+      border-radius: 20px;
+      background: radial-gradient(circle at 82% 30%, rgba(16, 185, 129, 0.25) 0%, rgba(11, 19, 38, 0.82) 65%);
+      backdrop-filter: blur(12px);
+      border: 1.5px solid var(--emerald);
+      box-shadow: 0 0 35px rgba(16, 185, 129, 0.16), inset 0 0 24px rgba(0, 229, 255, 0.08);
+      padding: 24px 26px;
+      overflow: hidden;
+    }
+
+    .voxel-hero-art {
+      position: absolute;
+      right: 22px;
+      top: 16px;
+      width: 210px;
+      height: 210px;
+      opacity: 0.9;
+      pointer-events: none;
+      filter: drop-shadow(0 0 22px rgba(16, 185, 129, 0.45));
+    }
+
+    @media (max-width: 720px) {
+      .voxel-hero-art {
+        opacity: 0.18;
+        right: -25px;
+      }
+    }
+
+    .top-pills-row {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-bottom: 12px;
+    }
+
+    .pill-emerald {
+      background: var(--emerald);
+      color: #021a12;
+      font-weight: 900;
+      font-size: 0.68rem;
+      padding: 4px 11px;
+      border-radius: 99px;
+      text-transform: uppercase;
+    }
+
+    .pill-gcubes {
+      background: rgba(251, 191, 36, 0.16);
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      font-weight: 800;
+      font-size: 0.68rem;
+      padding: 4px 11px;
+      border-radius: 99px;
+    }
+
+    .hero-main-title {
+      position: relative;
+      z-index: 2;
+      font-size: clamp(1.48rem, 3.6vw, 2.28rem);
+      font-weight: 900;
+      line-height: 1.18;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+
+    .hero-main-title span {
+      display: block;
+      background: linear-gradient(90deg, var(--emerald-bright), var(--cyan), var(--gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0 0 14px rgba(16, 185, 129, 0.35));
+    }
+
+    .hero-paragraph {
+      position: relative;
+      z-index: 2;
+      max-width: 630px;
+      font-size: 0.88rem;
+      color: #cbd5e1;
+      line-height: 1.55;
+      margin-bottom: 18px;
+    }
+
+    .commit-grid {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: 780px) {
+      .commit-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .commit-card {
+      background: rgba(6, 11, 23, 0.84);
+      border: 1px solid rgba(16, 185, 129, 0.22);
+      border-radius: 12px;
+      padding: 10px 12px;
+      display: flex;
+      align-items: center;
+      gap: 9px;
+    }
+
+    .commit-card .c-title {
+      font-size: 0.76rem;
+      font-weight: 800;
+      color: #fff;
+    }
+
+    .commit-card .c-sub {
+      font-size: 0.67rem;
+      color: var(--text-sub);
+    }
+
+    .hero-btns {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .btn-explore {
+      background: linear-gradient(135deg, var(--emerald), #059669);
+      color: #02140d;
+      font-weight: 900;
+      font-size: 0.82rem;
+      padding: 11px 18px;
+      border-radius: 11px;
+      text-decoration: none;
+      box-shadow: 0 0 22px rgba(16, 185, 129, 0.42);
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-zalo-hero {
+      background: linear-gradient(135deg, #0068ff, #00b4ff);
+      color: #fff;
+      font-weight: 800;
+      font-size: 0.82rem;
+      padding: 11px 18px;
+      border-radius: 11px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      box-shadow: 0 0 18px rgba(0, 104, 255, 0.35);
+    }
+
+    .btn-tiktok-hero {
+      background: linear-gradient(135deg, #fe2c55, #b91c1c);
+      color: #fff;
+      font-weight: 800;
+      font-size: 0.82rem;
+      padding: 11px 18px;
+      border-radius: 11px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      box-shadow: 0 0 18px rgba(254, 44, 85, 0.38);
+    }
+
+    /* ================= 8. KHỐI QUẢNG BÁ MẠNG XÃ HỘI ZALO & TIKTOK ================= */
+    .social-promo-box {
+      margin-top: 18px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    @media (max-width: 760px) {
+      .social-promo-box {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .promo-card {
+      border-radius: 16px;
+      padding: 16px 18px;
+      backdrop-filter: blur(12px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .promo-card.tiktok-card {
+      background: linear-gradient(135deg, rgba(254, 44, 85, 0.16), rgba(16, 28, 56, 0.82));
+      border: 1.5px solid rgba(254, 44, 85, 0.55);
+      box-shadow: 0 0 24px rgba(254, 44, 85, 0.14);
+    }
+
+    .promo-card.zalo-card {
+      background: linear-gradient(135deg, rgba(0, 229, 255, 0.14), rgba(16, 28, 56, 0.82));
+      border: 1.5px solid rgba(0, 229, 255, 0.55);
+      box-shadow: 0 0 24px rgba(0, 229, 255, 0.14);
+    }
+
+    .promo-info h3 {
+      font-size: 0.96rem;
+      font-weight: 900;
+      margin-bottom: 4px;
+    }
+
+    .promo-info p {
+      font-size: 0.78rem;
+      color: #cbd5e1;
+      line-height: 1.45;
+    }
+
+    /* ================= 9. KHO ACC & BỘ LỌC CHẾ ĐỘ BLOCKMAN GO ================= */
+    .sec-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 26px 0 12px;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .sec-title {
+      font-size: 1.08rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .sec-title::before {
+      content: "";
+      width: 5px;
+      height: 19px;
+      background: var(--emerald);
+      border-radius: 4px;
+      box-shadow: 0 0 10px var(--emerald);
+    }
+
+    .filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+
+    .filter-pill {
+      background: rgba(16, 28, 56, 0.82);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: #cbd5e1;
+      font-size: 0.78rem;
+      font-weight: 800;
+      padding: 8px 15px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .filter-pill:hover,
+    .filter-pill.active {
+      background: linear-gradient(135deg, var(--emerald), #059669);
+      border-color: var(--emerald-bright);
+      color: #02140d;
+      box-shadow: 0 0 14px rgba(16, 185, 129, 0.38);
+    }
+
+    .accounts-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(295px, 1fr));
+      gap: 18px;
+    }
+
+    .acc-item {
+      background: rgba(16, 28, 56, 0.8);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(16, 185, 129, 0.28);
+      border-radius: 16px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+    }
+
+    .acc-item:hover {
+      transform: translateY(-4px);
+      border-color: var(--cyan);
+      box-shadow: 0 12px 28px rgba(0, 229, 255, 0.16);
+    }
+
+    .acc-thumb {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9.5;
+      background: #040811;
+      overflow: hidden;
+    }
+
+    .acc-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      cursor: zoom-in;
+      transition: transform 0.35s ease;
+    }
+
+    .acc-item:hover .acc-thumb img {
+      transform: scale(1.03);
+    }
+
+    .badge-new-acc {
+      position: absolute;
+      top: 9px;
+      left: 9px;
+      background: var(--emerald);
+      color: #00140c;
+      font-size: 0.66rem;
+      font-weight: 900;
+      padding: 3px 9px;
+      border-radius: 6px;
+      pointer-events: none;
+      z-index: 3;
+    }
+
+    .badge-mode-tag {
+      position: absolute;
+      bottom: 8px;
+      left: 8px;
+      background: rgba(6, 11, 23, 0.85);
+      border: 1px solid rgba(251, 191, 36, 0.55);
+      color: var(--gold);
+      font-size: 0.65rem;
+      font-weight: 800;
+      padding: 2px 8px;
+      border-radius: 6px;
+      pointer-events: none;
+      z-index: 3;
+    }
+
+    .badge-img-count {
+      position: absolute;
+      top: 9px;
+      right: 9px;
+      background: rgba(0, 0, 0, 0.8);
+      border: 1px solid var(--cyan);
+      color: var(--cyan);
+      font-size: 0.68rem;
+      font-weight: 800;
+      padding: 2px 8px;
+      border-radius: 6px;
+      pointer-events: none;
+      z-index: 3;
+    }
+
+    .badge-fullscreen {
+      position: absolute;
+      bottom: 8px;
+      right: 8px;
+      background: rgba(0, 0, 0, 0.78);
+      color: #fff;
+      font-size: 0.64rem;
+      padding: 3px 8px;
+      border-radius: 6px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      pointer-events: none;
+      z-index: 3;
+    }
+
+    .slide-nav-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: rgba(6, 11, 23, 0.82);
+      border: 1px solid var(--cyan);
+      color: var(--cyan);
+      font-weight: 900;
+      cursor: pointer;
+      display: grid;
+      place-items: center;
+      z-index: 4;
+    }
+
+    .slide-nav-btn.prev { left: 8px; }
+    .slide-nav-btn.next { right: 8px; }
+
+    .acc-mini-thumbs {
+      display: flex;
+      gap: 6px;
+      padding: 8px 12px 0;
+      overflow-x: auto;
+    }
+
+    .acc-mini-thumbs img {
+      width: 46px;
+      height: 32px;
+      object-fit: cover;
+      border-radius: 6px;
+      border: 1.5px solid rgba(255, 255, 255, 0.2);
+      cursor: pointer;
+      opacity: 0.65;
+      flex-shrink: 0;
+    }
+
+    .acc-mini-thumbs img.active {
+      border-color: var(--emerald-bright);
+      opacity: 1;
+    }
+
+    .acc-info {
+      padding: 14px 15px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .acc-name {
+      font-size: 0.98rem;
+      font-weight: 800;
+      margin-bottom: 6px;
+    }
+
+    .acc-detail {
+      font-size: 0.8rem;
+      color: var(--text-sub);
+      line-height: 1.48;
+      margin-bottom: 14px;
+      flex: 1;
+      white-space: pre-line;
+    }
+
+    .acc-foot {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 11px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      gap: 8px;
+    }
+
+    .acc-cost {
+      font-size: 1.12rem;
+      font-weight: 900;
+      color: var(--gold);
+    }
+
+    .btn-zalo-buy {
+      background: linear-gradient(135deg, var(--cyan), #0068ff);
+      color: #fff;
+      font-weight: 900;
+      font-size: 0.78rem;
+      padding: 8px 14px;
+      border-radius: 9px;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    /* TRẠNG THÁI ĐÃ CỌC & ĐÃ BÁN */
+    .badge-status-deposited {
+      background: linear-gradient(135deg, #fbbf24, #d97706) !important;
+      color: #000 !important;
+      box-shadow: 0 0 12px rgba(251, 191, 36, 0.6);
+    }
+
+    .badge-status-sold {
+      background: linear-gradient(135deg, #ef4444, #b91c1c) !important;
+      color: #fff !important;
+      box-shadow: 0 0 12px rgba(239, 68, 68, 0.6);
+    }
+
+    .acc-status-stamp {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(-10deg);
+      padding: 6px 18px;
+      border-radius: 8px;
+      font-size: 0.94rem;
+      font-weight: 900;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      pointer-events: none;
+      z-index: 3;
+      white-space: nowrap;
+      backdrop-filter: blur(3px);
+    }
+
+    .acc-status-stamp.deposited {
+      background: rgba(245, 158, 11, 0.9);
+      border: 2px solid #fde68a;
+      color: #000;
+      box-shadow: 0 0 20px rgba(245, 158, 11, 0.75);
+    }
+
+    .acc-status-stamp.sold {
+      background: rgba(220, 38, 38, 0.92);
+      border: 2px solid #fecaca;
+      color: #fff;
+      box-shadow: 0 0 20px rgba(239, 68, 68, 0.8);
+    }
+
+    .btn-zalo-buy.btn-status-deposited {
+      background: linear-gradient(135deg, #fbbf24, #d97706);
+      color: #000;
+    }
+
+    .btn-zalo-buy.btn-status-sold {
+      background: rgba(239, 68, 68, 0.18);
+      border: 1px solid #ef4444;
+      color: #fca5a5;
+    }
+
+    .adm-status-select {
+      background: #060b17;
+      color: #fff;
+      border: 1px solid var(--cyan);
+      border-radius: 7px;
+      padding: 5px 8px;
+      font-size: 0.74rem;
+      font-weight: 800;
+      outline: none;
+      cursor: pointer;
+    }
+
+    /* ================= 10. ĐÁNH GIÁ KHÁCH HÀNG ================= */
+    .review-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.3fr;
+      gap: 18px;
+    }
+
+    @media (max-width: 780px) {
+      .review-layout {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .card-panel {
+      background: rgba(16, 28, 56, 0.8);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      border-radius: 15px;
+      padding: 16px;
+    }
+
+    .inp-group {
+      margin-bottom: 10px;
+    }
+
+    .inp-group label {
+      display: block;
+      font-size: 0.75rem;
+      color: var(--text-sub);
+      margin-bottom: 4px;
+      font-weight: 600;
+    }
+
+    .inp-box {
+      width: 100%;
+      padding: 9px 11px;
+      border-radius: 9px;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      background: #060b17;
+      color: #fff;
+      font-size: 0.84rem;
+      outline: none;
+    }
+
+    .inp-box:focus {
+      border-color: var(--emerald);
+    }
+
+    .rev-card {
+      background: rgba(255, 255, 255, 0.035);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 10px;
+      padding: 10px 12px;
+      margin-bottom: 9px;
+    }
+
+    /* ================= 11. LIGHTBOX PHÓNG TO NHIỀU ẢNH ================= */
+    #lightbox-modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(2, 5, 12, 0.96);
+      z-index: 99995;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 14px;
+    }
+
+    #lightbox-modal.open {
+      display: flex;
+    }
+
+    #lightbox-modal img {
+      max-width: 95vw;
+      max-height: 82vh;
+      object-fit: contain;
+      border-radius: 10px;
+      border: 1.5px solid rgba(16, 185, 129, 0.45);
+    }
+
+    .lb-controls {
+      margin-top: 12px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    /* ================= 12. MODAL QUẢN TRỊ ADMIN ================= */
+    #adm-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(3, 6, 15, 0.94);
+      backdrop-filter: blur(8px);
+      z-index: 99990;
+      display: none;
+      overflow-y: auto;
+      padding: 18px 3%;
+    }
+
+    #adm-overlay.open {
+      display: block;
+    }
+
+    .adm-container {
+      max-width: 1040px;
+      margin: 0 auto;
+      background: #0b1326;
+      border: 1.5px solid var(--emerald);
+      border-radius: 16px;
+      padding: 18px;
+    }
+
+    .adm-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 14px;
+    }
+
+    @media (max-width: 780px) {
+      .adm-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .preview-upload-strip {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      margin-top: 6px;
+    }
+
+    .preview-upload-strip img {
+      width: 54px;
+      height: 38px;
+      object-fit: cover;
+      border-radius: 6px;
+      border: 1px solid var(--emerald);
+    }
+
+    /* ================= 13. CỤM NÚT NỔI ZALO & TIKTOK ================= */
+    .floating-social-cluster {
+      position: fixed;
+      bottom: 18px;
+      right: 18px;
+      z-index: 900;
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+      align-items: flex-end;
+    }
+
+    .float-pill-btn {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 0.8rem;
+      padding: 10px 15px;
+      border-radius: 99px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: transform 0.2s ease;
+    }
+
+    .float-pill-btn:hover {
+      transform: translateY(-2px) scale(1.02);
+    }
+
+    .float-zalo-btn {
+      background: linear-gradient(135deg, #0068ff, #00c6ff);
+      box-shadow: 0 6px 20px rgba(0, 104, 255, 0.5);
+    }
+
+    .float-tiktok-btn {
+      background: linear-gradient(135deg, #fe2c55, #111827);
+      border: 1px solid rgba(37, 244, 238, 0.65);
+      box-shadow: 0 6px 20px rgba(254, 44, 85, 0.45);
+    }
+
+    #msg-toast {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      background: #101c38;
+      border: 1.5px solid var(--emerald);
+      color: #fff;
+      padding: 10px 16px;
+      border-radius: 10px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      z-index: 100000;
+      display: none;
+      max-width: 88vw;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.65);
+    }
+  </style>
+</head>
+<body>
+  <!-- KHÔNG GIAN 3D VOXEL BLOCKMAN GO THỜI GIAN THỰC -->
+  <div id="voxel-3d-stage">
+    <canvas id="voxel-3d-canvas"></canvas>
+  </div>
+
+  <!-- INTRO 3 GIÂY ĐẦU TRANG (CHẠM ĐỂ VÀO NHANH) -->
+  <div id="intro-screen" onclick="this.classList.add('hide')" title="Chạm để bỏ qua">
+    <video id="intro-video" autoplay muted playsinline></video>
+    <div class="intro-content">
+      <div class="intro-cube-box">🧊</div>
+      <div style="font-size: clamp(1.5rem, 4.5vw, 2.2rem); font-weight: 900; letter-spacing: 1px;">
+        <span id="intro-title-txt">TUẤN ANH BLOCKMAN GO</span>
+        <span style="background: var(--gold); color:#000; font-size: 0.42em; padding: 3px 8px; border-radius: 6px; vertical-align: middle; margin-left: 6px;">TUANANHSHOPACC</span>
+      </div>
+      <p style="color: var(--emerald-bright); font-size: 0.84rem; margin-top: 8px; font-weight: 700;">
+        💬 Zalo: <span id="intro-phone-txt">0374132655</span> &nbsp;•&nbsp; 🎵 TikTok: <span id="intro-tiktok-txt">@tuananhdepzaiff</span>
+      </p>
+      <div class="intro-progress"></div>
+    </div>
+  </div>
+
+  <!-- THANH LIVE 24/7 -->
+  <div class="top-live-bar">
+    <div class="live-left">
+      <span class="live-badge">LIVE 24/7</span>
+      <div class="ticker-viewport">
+        <div class="ticker-track" id="live-ticker-txt">
+          🧊 Chào mừng đến với TUẤN ANH BLOCKMAN GO — Kho Acc Bed Wars, Sky Block, Jailbreak, Skin VIP &amp; Gcubes uy tín 100%! &nbsp;&nbsp;•&nbsp;&nbsp; 💬 Zalo Mua Acc 1s: 0374132655 &nbsp;&nbsp;•&nbsp;&nbsp; 🎵 Follow TikTok @tuananhdepzaiff săn Acc giá rẻ mỗi ngày!
+        </div>
+      </div>
+    </div>
+    <div class="live-right">
+      <a id="top-live-zalo" href="https://zalo.me/0374132655" target="_blank">💬 Zalo: <strong id="top-phone">0374132655</strong></a>
+      <a id="top-live-tiktok" href="https://www.tiktok.com/@tuananhdepzaiff" target="_blank" style="color: #ff6b8b;">🎵 <strong id="top-tiktok">@tuananhdepzaiff</strong></a>
+    </div>
+  </div>
+
+  <!-- HEADER CHÍNH -->
+  <header class="header-bar">
+    <div class="brand-wrap">
+      <div class="voxel-logo-icon">🧊</div>
+      <div>
+        <div class="brand-title-line">
+          <span class="brand-main-name" id="header-name">TUẤN ANH BLOCKMAN GO</span>
+          <span class="brand-gold-tag">VIP SHOP</span>
+        </div>
+        <div class="brand-sub-domain">
+          TuanAnhShopAcc &nbsp;•&nbsp; Zalo: <span id="sub-phone">0374132655</span> &nbsp;•&nbsp; TikTok: <span id="sub-tiktok">@tuananhdepzaiff</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="header-right-tools">
+      <a id="top-zalo-btn" href="https://zalo.me/0374132655" target="_blank" class="btn-zalo-top">
+        💬 Chat Zalo
+      </a>
+      <a id="top-tiktok-btn" href="https://www.tiktok.com/@tuananhdepzaiff" target="_blank" class="btn-tiktok-top">
+        🎵 Follow TikTok
+      </a>
+      <button class="btn-adm-open" onclick="openAdmin()">⚙️ Admin</button>
+    </div>
+  </header>
+
+  <!-- MENU ĐIỀU HƯỚNG DÍNH -->
+  <nav class="menu-tabs">
+    <a href="#kho-acc-sec" class="tab-link active" id="nav-kho" onclick="switchNav('kho')">
+      <span>🎮</span><span>KHO ACC BLOCKMAN GO</span>
+    </a>
+    <a href="#review-sec" class="tab-link" id="nav-rev" onclick="switchNav('rev')">
+      <span>⭐</span><span>ĐÁNH GIÁ UY TÍN</span>
+    </a>
+  </nav>
+
+  <!-- NỘI DUNG CHÍNH -->
+  <main class="wrapper">
+    <!-- BẢNG ĐIỀU KHIỂN GÓC NHÌN 3D VOXEL BLOCKMAN GO -->
+    <div class="voxel-hud-panel" id="voxel-hud-bar">
+      <div class="voxel-hud-top">
+        <div class="voxel-hud-title">
+          <span>🧊</span>
+          <span>THẾ GIỚI 3D VOXEL: ĐẢO BED WARS • SKY BLOCK • TINH THỂ GCUBES</span>
+        </div>
+        <span class="voxel-target-badge" id="voxel-target-label">Đang ngắm: Toàn Cảnh Đảo Block 3D (Kéo chuột để xoay 360°)</span>
+      </div>
+      <div class="voxel-cam-btns">
+        <button class="btn-voxel-cam active" id="cam-btn-overview" onclick="setVoxelTarget('overview')">🌌 Toàn Cảnh Đảo Block</button>
+        <button class="btn-voxel-cam" id="cam-btn-bedwars" onclick="setVoxelTarget('bedwars')">🛏️ Đảo Bed Wars</button>
+        <button class="btn-voxel-cam" id="cam-btn-skyblock" onclick="setVoxelTarget('skyblock')">🏝️ Đảo Sky Block</button>
+        <button class="btn-voxel-cam" id="cam-btn-gcubes" onclick="setVoxelTarget('gcubes')">💎 Tinh Thể Gcubes</button>
+        <button class="btn-voxel-cam" id="cam-btn-warp" onclick="toggleVoxelWarp()">⚡ Tốc Độ: x1</button>
+        <button class="btn-voxel-fullscreen" id="btn-pure-3d" onclick="togglePure3DMode()">🔭 Ngắm 3D Toàn Màn Hình</button>
+      </div>
+    </div>
+
+    <!-- HERO BANNER CHỦ ĐỀ BLOCKMAN GO -->
+    <section class="hero-banner-box">
+      <!-- Minh họa khối Voxel + Tinh thể Gcubes SVG -->
+      <svg class="voxel-hero-art" viewBox="0 0 220 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="110,20 185,62 110,104 35,62" fill="#34d399" fill-opacity="0.88" stroke="#00e5ff" stroke-width="2"/>
+        <polygon points="35,62 110,104 110,185 35,143" fill="#059669" fill-opacity="0.78" stroke="#10b981" stroke-width="2"/>
+        <polygon points="185,62 110,104 110,185 185,143" fill="#064e3b" fill-opacity="0.85" stroke="#00e5ff" stroke-width="2"/>
+        <polygon points="110,44 134,58 110,72 86,58" fill="#fbbf24" stroke="#fff" stroke-width="1.5"/>
+        <polygon points="86,58 110,72 110,96 86,82" fill="#f59e0b"/>
+        <polygon points="134,58 110,72 110,96 134,82" fill="#b45309"/>
+      </svg>
+
+      <div class="top-pills-row">
+        <span class="pill-emerald">⚡ ĐỒNG BỘ KHO ACC 1 GIÂY</span>
+        <span class="pill-gcubes">💎 BED WARS • SKY BLOCK • JAILBREAK • GCUBES</span>
+      </div>
+
+      <h1 class="hero-main-title">
+        TUANANHSHOPACC — SHOP ACC BLOCKMAN GO UY TÍN
+        <span id="banner-shop-name">TUẤN ANH BLOCKMAN GO</span>
+      </h1>
+
+      <p class="hero-paragraph">
+        <strong>TuanAnhShopAcc (tuananhshopacc)</strong> chuyên cung cấp tài khoản <strong>Blockman GO VIP</strong>: <strong>Bed Wars</strong> full rune &amp; hiệu ứng, <strong>Sky Block</strong> đảo giàu, <strong>Jailbreak</strong> full xe, acc nhiều <strong>Gcubes &amp; Skin hiếm</strong>. Trắng thông tin 100%, xem ảnh HD gốc và giao dịch trực tiếp qua Zalo!
+      </p>
+
+      <div class="commit-grid">
+        <div class="commit-card"><span>⚡</span><div><div class="c-title">Giao Acc 1s</div><div class="c-sub">Hỗ trợ 24/7</div></div></div>
+        <div class="commit-card"><span>🛡️</span><div><div class="c-title">Bảo Hành 100%</div><div class="c-sub">Uy tín tuyệt đối</div></div></div>
+        <div class="commit-card"><span>🖼️</span><div><div class="c-title">Ảnh HD Gốc</div><div class="c-sub">Lướt xem nhiều ảnh</div></div></div>
+        <div class="commit-card"><span>✅</span><div><div class="c-title">Trắng TT</div><div class="c-sub">Đổi mật khẩu ngay</div></div></div>
+      </div>
+
+      <div class="hero-btns">
+        <a href="#kho-acc-sec" class="btn-explore">🛒 XEM KHO ACC NGAY</a>
+        <a id="banner-zalo-btn" href="https://zalo.me/0374132655" target="_blank" class="btn-zalo-hero">💬 ZALO: 0374132655</a>
+        <a id="banner-tiktok-btn" href="https://www.tiktok.com/@tuananhdepzaiff" target="_blank" class="btn-tiktok-hero">🎵 TIKTOK: @tuananhdepzaiff</a>
+      </div>
+    </section>
+
+    <!-- KHỐI QUẢNG BÁ MẠNG XÃ HỘI TIKTOK & ZALO -->
+    <section class="social-promo-box">
+      <div class="promo-card tiktok-card">
+        <div class="promo-info">
+          <h3 style="color: #ff6b8b;">🎵 Kênh TikTok Chính Thức: <span id="promo-tiktok-handle">@tuananhdepzaiff</span></h3>
+          <p>Follow ngay để xem review Acc Blockman GO cực cháy, săn kèo Acc Bed Wars / Sky Block giá rẻ và nhận quà Gcubes mỗi tuần!</p>
+        </div>
+        <a id="promo-tiktok-btn" href="https://www.tiktok.com/@tuananhdepzaiff" target="_blank" class="btn-tiktok-top" style="padding: 10px 16px;">
+          🔥 Follow Ngay
+        </a>
+      </div>
+
+      <div class="promo-card zalo-card">
+        <div class="promo-info">
+          <h3 style="color: var(--cyan);">💬 Zalo Giao Dịch Trực Tiếp: <span id="promo-zalo-phone">0374132655</span></h3>
+          <p>Nhắn tin Zalo để chốt Acc trong 1 giây, hỗ trợ kiểm tra Acc, trung gian uy tín và bảo hành trọn đời cho anh em!</p>
+        </div>
+        <a id="promo-zalo-btn" href="https://zalo.me/0374132655" target="_blank" class="btn-zalo-top" style="padding: 10px 16px;">
+          ⚡ Nhắn Zalo 1s
+        </a>
+      </div>
+    </section>
+
+    <!-- KHO ACC BLOCKMAN GO -->
+    <div class="sec-head" id="kho-acc-sec">
+      <div class="sec-title">KHO ACC BLOCKMAN GO ĐANG BÁN</div>
+      <span style="font-size: 0.75rem; color: var(--emerald-bright);">⚡ Chạm vào ảnh để phóng to HD &amp; lướt xem nhiều hình</span>
+    </div>
+
+    <!-- BỘ LỌC NHANH THEO CHẾ ĐỘ GAME -->
+    <div class="filter-bar" id="mode-filter-bar">
+      <button class="filter-pill active" data-mode="all" onclick="setModeFilter('all')">🔥 Tất Cả</button>
+      <button class="filter-pill" data-mode="bedwars" onclick="setModeFilter('bedwars')">🛏️ Bed Wars</button>
+      <button class="filter-pill" data-mode="skyblock" onclick="setModeFilter('skyblock')">🏝️ Sky Block</button>
+      <button class="filter-pill" data-mode="jailbreak" onclick="setModeFilter('jailbreak')">🚓 Jailbreak</button>
+      <button class="filter-pill" data-mode="vip" onclick="setModeFilter('vip')">💎 VIP / Full Skin</button>
+    </div>
+
+    <div class="accounts-grid" id="acc-grid-box"></div>
+
+    <!-- ĐÁNH GIÁ UY TÍN TỪ KHÁCH HÀNG -->
+    <div class="sec-head" id="review-sec" style="margin-top: 38px;">
+      <div class="sec-title">ĐÁNH GIÁ UY TÍN TỪ KHÁCH HÀNG</div>
+    </div>
+    <div class="review-layout">
+      <div class="card-panel">
+        <h4 style="color: var(--emerald-bright); margin-bottom: 8px;">✍️ Gửi Đánh Giá Của Bạn</h4>
+        <p style="font-size: 0.76rem; color: var(--text-sub); margin-bottom: 12px;">
+          Đánh giá của bạn sẽ hiển thị công khai sau khi được Admin phê duyệt.
+        </p>
+        <div class="inp-group"><label>Tên khách hàng</label><input type="text" id="cus-name" class="inp-box" placeholder="VD: Gia Bảo - 037xxx" /></div>
+        <div class="inp-group">
+          <label>Mức độ hài lòng</label>
+          <select id="cus-stars" class="inp-box">
+            <option value="5">⭐⭐⭐⭐⭐ (5 Sao - Quá Uy Tín)</option>
+            <option value="4">⭐⭐⭐⭐ (4 Sao - Rất Hài Lòng)</option>
+            <option value="3">⭐⭐⭐ (3 Sao - Ổn)</option>
+          </select>
+        </div>
+        <div class="inp-group"><label>Nội dung nhận xét</label><textarea id="cus-text" rows="2" class="inp-box" placeholder="Acc Bed Wars đúng như ảnh, giao dịch nhanh 1s..."></textarea></div>
+        <button class="btn-explore" style="width:100%; justify-content:center;" onclick="sendReview()">Gửi Đánh Giá Lên Shop</button>
+      </div>
+
+      <div class="card-panel">
+        <h4 style="color: var(--gold); margin-bottom: 10px;">🌟 Nhận Xét Đã Duyệt</h4>
+        <div id="approved-reviews-box"></div>
+      </div>
+    </div>
+
+    <footer style="margin-top: 32px; padding: 18px; text-align: center; font-size: 0.78rem; color: var(--text-sub); background: rgba(11, 19, 38, 0.72); border: 1px solid rgba(16, 185, 129, 0.18); border-radius: 14px;">
+      <strong style="color: var(--emerald-bright);">TuanAnhShopAcc (tuananhshopacc)</strong> — Hệ thống Shop Acc Blockman GO (Bed Wars, Sky Block, Jailbreak, Skin VIP, Gcubes) chính chủ tại <strong>tuananhshopacc.github.io/DS/</strong>.
+    </footer>
+  </main>
+
+  <!-- LIGHTBOX XEM ẢNH FULL SCREEN -->
+  <div id="lightbox-modal" onclick="if(event.target.id==='lightbox-modal') closeFullImg()">
+    <img id="lightbox-target" src="" alt="Xem ảnh HD gốc" />
+    <div class="lb-controls">
+      <button class="btn-adm-open" onclick="stepLightbox(-1)">❮ Ảnh trước</button>
+      <span id="lightbox-counter" style="font-size:0.85rem; font-weight:800; color:var(--emerald-bright);">1 / 1</span>
+      <button class="btn-adm-open" onclick="stepLightbox(1)">Ảnh sau ❯</button>
+      <button class="btn-adm-open" style="border-color:#ef4444; color:#ef4444;" onclick="closeFullImg()">Đóng ✕</button>
+    </div>
+  </div>
+
+  <!-- CỤM NÚT NỔI QUẢNG BÁ ZALO & TIKTOK -->
+  <div class="floating-social-cluster">
+    <a id="float-tiktok" href="https://www.tiktok.com/@tuananhdepzaiff" target="_blank" class="float-pill-btn float-tiktok-btn">
+      🎵 TikTok: @tuananhdepzaiff
+    </a>
+    <a id="float-zalo" href="https://zalo.me/0374132655" target="_blank" class="float-pill-btn float-zalo-btn">
+      💬 Zalo: 0374132655
+    </a>
+  </div>
+
+  <!-- BẢNG QUẢN TRỊ ADMIN BẢO MẬT -->
+  <div id="adm-overlay">
+    <div class="adm-container">
+      <!-- BƯỚC ĐĂNG NHẬP ADMIN -->
+      <div id="adm-login-step">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 14px;">
+          <h3>🔐 ĐĂNG NHẬP QUẢN TRỊ VIÊN</h3>
+          <button class="btn-adm-open" onclick="closeAdmin()">Đóng ✕</button>
+        </div>
+        <div class="inp-group">
+          <label>Nhập mật khẩu Admin (Mặc định là SĐT chủ shop):</label>
+          <input type="password" id="adm-pw" class="inp-box" placeholder="Nhập mật khẩu quản trị..." onkeydown="if(event.key==='Enter') verifyAdmin()" />
+        </div>
+        <button class="btn-explore" onclick="verifyAdmin()">Mở Bảng Quản Trị</button>
+      </div>
+
+      <!-- GIAO DIỆN QUẢN TRỊ CHÍNH -->
+      <div id="adm-main-step" style="display:none;">
+        <div style="background:rgba(16,185,129,0.12); border:1px solid var(--emerald); border-radius:12px; padding:14px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;">
+          <div>
+            <h3 style="color: var(--emerald-bright);" id="adm-welcome-title">🧊 Quản Trị Viên: TUẤN ANH BLOCKMAN GO</h3>
+            <p style="font-size: 0.76rem; color: var(--cyan);" id="sync-status-line">⚡ Chế độ Tự Động Đẩy GitHub 1s: SẴN SÀNG</p>
+          </div>
+          <div style="display:flex; gap:8px; flex-wrap:wrap;">
+            <button class="btn-explore" onclick="pushGitHub(false, 'Đồng bộ thủ công')">🚀 Đồng Bộ Ngay Lên GitHub</button>
+            <button class="btn-adm-open" style="border-color:var(--gold); color:var(--gold);" onclick="logoutAdmin()">🔒 Khóa Admin</button>
+            <button class="btn-adm-open" onclick="closeAdmin()">Đóng ✕</button>
+          </div>
+        </div>
+
+        <div class="adm-grid">
+          <!-- CỘT TRÁI: ĐĂNG ACC + GITHUB AUTO-SYNC + ĐỔI MẬT KHẨU -->
+          <div class="card-panel">
+            <h4 style="color: var(--emerald-bright); margin-bottom: 10px;">1. Đăng Acc Blockman GO Mới (1 hoặc Nhiều Ảnh)</h4>
+            <div class="inp-group"><label>Tên Acc / Mã Số</label><input type="text" id="adm-acc-name" class="inp-box" placeholder="VD: Acc Bed Wars VIP #01 - Full Rune &amp; 5000 Gcubes" /></div>
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px;">
+              <div class="inp-group"><label>Giá Bán</label><input type="text" id="adm-acc-price" class="inp-box" placeholder="VD: 250.000đ" /></div>
+              <div class="inp-group">
+                <label>Chế Độ Game</label>
+                <select id="adm-acc-mode" class="inp-box">
+                  <option value="bedwars">🛏️ Bed Wars</option>
+                  <option value="skyblock">🏝️ Sky Block</option>
+                  <option value="jailbreak">🚓 Jailbreak</option>
+                  <option value="vip">💎 VIP / Full Skin</option>
+                </select>
+              </div>
+            </div>
+            <div class="inp-group">
+              <label>Trạng Thái Acc</label>
+              <select id="adm-acc-status" class="inp-box">
+                <option value="selling">🟢 Đang bán</option>
+                <option value="deposited">🟡 Đã cọc</option>
+                <option value="sold">🔴 Đã bán</option>
+              </select>
+            </div>
+            <div class="inp-group">
+              <label>Chọn 1 hoặc Nhiều Ảnh từ máy (Giữ 100% độ nét gốc)</label>
+              <input type="file" id="adm-acc-file" class="inp-box" accept="image/*" multiple onchange="previewSelectedImages(this)" style="margin-bottom:6px;" />
+              <div id="adm-img-preview" class="preview-upload-strip"></div>
+              <input type="text" id="adm-acc-url" class="inp-box" style="margin-top:6px;" placeholder="Hoặc dán 1 hay nhiều Link ảnh (cách nhau dấu phẩy)..." />
+            </div>
+            <div class="inp-group"><label>Mô tả chi tiết Acc</label><textarea id="adm-acc-desc" rows="2" class="inp-box" placeholder="Trắng thông tin 100%, full rune Bed Wars, nhiều Gcubes..."></textarea></div>
+            <button class="btn-explore" style="width:100%; justify-content:center;" onclick="createAcc()">➕ Đăng Acc &amp; Tự Đẩy Lên Web (1s)</button>
+
+            <hr style="border:none; border-top:1px solid rgba(255,255,255,0.08); margin: 15px 0;" />
+
+            <h4 style="color: var(--gold); margin-bottom: 8px;">2. Kết Nối GitHub Token Auto-Sync (1s)</h4>
+            <p style="font-size: 0.73rem; color: var(--text-sub); margin-bottom: 8px;">
+              Bấm nút tạo Token GitHub tích sẵn quyền <code>repo</code> rồi dán vào ô dưới. Mọi thao tác đăng/xóa/đổi trạng thái sẽ tự đồng bộ lên GitHub Pages cho khách xem ngay lập tức!
+            </p>
+            <div style="display:flex; gap:8px; margin-bottom:10px; flex-wrap:wrap;">
+              <a href="https://github.com/settings/tokens/new?description=TuanAnhBlockmanGO_AutoSync&scopes=repo" target="_blank" class="btn-adm-open" style="text-decoration:none; background:rgba(251,191,36,0.14); border-color:var(--gold); color:var(--gold);">
+                🔑 1-Click Tạo Token GitHub
+              </a>
+              <button class="btn-adm-open" onclick="autoDetectGithubRepo()">🔍 Tự Nhận Diện Repo</button>
+            </div>
+            <div class="inp-group"><label>Mã GitHub Token (ghp_...)</label><input type="password" id="gh-token" class="inp-box" placeholder="Dán mã Token vừa tạo vào đây..." onchange="saveGithubCreds()" /></div>
+            <div class="inp-group"><label>Tên Repository (VD: username/ten-repo)</label><input type="text" id="gh-repo" class="inp-box" placeholder="username/ten-repo" onchange="saveGithubCreds()" /></div>
+
+            <hr style="border:none; border-top:1px solid rgba(255,255,255,0.08); margin: 15px 0;" />
+
+            <h4 style="color: var(--cyan); margin-bottom: 8px;">3. Đổi Mật Khẩu Admin (Mã Hóa 1 Chiều)</h4>
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-bottom:8px;">
+              <div class="inp-group" style="margin-bottom:0;">
+                <label>Mật khẩu mới</label>
+                <input type="password" id="adm-new-pw" class="inp-box" placeholder="Nhập mật khẩu mới..." />
+              </div>
+              <div class="inp-group" style="margin-bottom:0;">
+                <label>Nhập lại mật khẩu</label>
+                <input type="password" id="adm-confirm-pw" class="inp-box" placeholder="Xác nhận mật khẩu..." onkeydown="if(event.key==='Enter') changeAdminPassword()" />
+              </div>
+            </div>
+            <button class="btn-adm-open" style="width:100%; border-color:var(--gold); color:var(--gold);" onclick="changeAdminPassword()">🔑 Lưu Mật Khẩu Admin Mới</button>
+          </div>
+
+          <!-- CỘT PHẢI: CÀI ĐẶT SHOP + DUYỆT ĐÁNH GIÁ + QUẢN LÝ ACC -->
+          <div class="card-panel">
+            <h4 style="color: var(--emerald-bright); margin-bottom: 8px;">4. Cài Đặt Shop, Zalo, TikTok, Video Intro &amp; SEO</h4>
+            <div class="inp-group"><label>Tên Shop</label><input type="text" id="adm-cfg-name" class="inp-box" placeholder="TUẤN ANH BLOCKMAN GO" /></div>
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px;">
+              <div class="inp-group"><label>SĐT / Zalo</label><input type="text" id="adm-cfg-phone" class="inp-box" placeholder="0374132655" /></div>
+              <div class="inp-group"><label>ID TikTok (không cần @)</label><input type="text" id="adm-cfg-tiktok" class="inp-box" placeholder="tuananhdepzaiff" /></div>
+            </div>
+            <div class="inp-group">
+              <label>🎬 Chọn Video Intro 3s từ máy hoặc dán Link MP4</label>
+              <input type="file" id="adm-cfg-video-file" class="inp-box" accept="video/mp4,video/webm,video/*" style="margin-bottom:6px;" />
+              <input type="text" id="adm-cfg-video" class="inp-box" placeholder="Hoặc dán link video MP4..." />
+            </div>
+            <div class="inp-group">
+              <label>🔍 Mã Google Search Console (Dán cả thẻ &lt;meta...&gt; hoặc chỉ mã content đều được)</label>
+              <input type="text" id="adm-cfg-gsc" class="inp-box" placeholder='VD: abc123... hoặc <meta name="google-site-verification" content="..." />' />
+            </div>
+            <div class="inp-group">
+              <label>Từ khóa SEO Top 1 Google</label>
+              <input type="text" id="adm-cfg-seo" class="inp-box" placeholder="tuananhshopacc, TuanAnhShopAcc, Tuấn Anh Blockman GO..." />
+            </div>
+            <div id="seo-deploy-status" style="font-size:0.74rem; color:var(--emerald-bright); margin-bottom:8px; display:none;"></div>
+            <div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom: 14px;">
+              <button class="btn-explore" onclick="updateShopCfg()">💾 Lưu Cài Đặt &amp; Đồng Bộ</button>
+              <button class="btn-adm-open" style="background:rgba(16,185,129,0.18); border-color:var(--emerald-bright); color:var(--emerald-bright);" onclick="deploySeoToGithub()">🚀 1-Click Đẩy SEO Top 1 (index + sitemap + robots)</button>
+              <a href="https://search.google.com/search-console" target="_blank" class="btn-adm-open" style="text-decoration:none;">🌐 Google Console</a>
+              <a href="https://www.google.com/search?q=site:tuananhshopacc.github.io" target="_blank" class="btn-adm-open" style="text-decoration:none; border-color:var(--gold); color:var(--gold);">🔎 Kiểm Tra Đã Lên Google</a>
+            </div>
+
+            <h4 style="color: var(--gold); margin-bottom: 8px;">5. Duyệt / Xóa Đánh Giá Khách Hàng</h4>
+            <div id="adm-rev-list" style="max-height: 135px; overflow-y: auto; margin-bottom: 14px;"></div>
+
+            <h4 style="color: var(--cyan); margin-bottom: 8px;">6. Quản Lý Danh Sách Acc (Đổi Trạng Thái / Xóa)</h4>
+            <div id="adm-acc-list" style="max-height: 175px; overflow-y: auto;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- THÔNG BÁO TOAST -->
+  <div id="msg-toast"></div>
+
+  <script>
+    // ================= TẠO ẢNH MINH HỌA BLOCKMAN GO SẮC NÉT CHO 3 ACC MẪU =================
+    function buildVoxelPoster(theme, badgeText, mainTitle, subLine, accentColor) {
+      const c = document.createElement("canvas");
+      c.width = 640;
+      c.height = 380;
+      const ctx = c.getContext("2d");
+
+      // Nền gradient gaming theo chủ đề chế độ chơi
+      const bg = ctx.createLinearGradient(0, 0, 640, 380);
+      if (theme === "bedwars") {
+        bg.addColorStop(0, "#240a14");
+        bg.addColorStop(0.55, "#111b36");
+        bg.addColorStop(1, "#071f1a");
+      } else if (theme === "skyblock") {
+        bg.addColorStop(0, "#062520");
+        bg.addColorStop(0.55, "#0d2240");
+        bg.addColorStop(1, "#081226");
+      } else {
+        bg.addColorStop(0, "#261805");
+        bg.addColorStop(0.55, "#181238");
+        bg.addColorStop(1, "#09152c");
+      }
+      ctx.fillStyle = bg;
+      ctx.fillRect(0, 0, 640, 380);
+
+      // Lưới ô vuông Voxel tinh tế
+      ctx.strokeStyle = "rgba(255,255,255,0.05)";
+      ctx.lineWidth = 1;
+      for (let x = 0; x < 640; x += 32) {
+        ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, 380); ctx.stroke();
+      }
+      for (let y = 0; y < 380; y += 32) {
+        ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(640, y); ctx.stroke();
+      }
+
+      // Hào quang trung tâm
+      const glow = ctx.createRadialGradient(470, 175, 16, 470, 175, 165);
+      glow.addColorStop(0, accentColor + "88");
+      glow.addColorStop(1, "rgba(0,0,0,0)");
+      ctx.fillStyle = glow;
+      ctx.fillRect(280, 0, 360, 380);
+
+      // Vẽ khối 3D Voxel minh họa ở bên phải
+      function drawIsoCube(cx, cy, s, topCol, leftCol, rightCol) {
+        ctx.beginPath();
+        ctx.moveTo(cx, cy - s);
+        ctx.lineTo(cx + s, cy - s * 0.5);
+        ctx.lineTo(cx, cy);
+        ctx.lineTo(cx - s, cy - s * 0.5);
+        ctx.closePath();
+        ctx.fillStyle = topCol;
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.moveTo(cx - s, cy - s * 0.5);
+        ctx.lineTo(cx, cy);
+        ctx.lineTo(cx, cy + s);
+        ctx.lineTo(cx - s, cy + s * 0.5);
+        ctx.closePath();
+        ctx.fillStyle = leftCol;
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.moveTo(cx + s, cy - s * 0.5);
+        ctx.lineTo(cx, cy);
+        ctx.lineTo(cx, cy + s);
+        ctx.lineTo(cx + s, cy + s * 0.5);
+        ctx.closePath();
+        ctx.fillStyle = rightCol;
+        ctx.fill();
+      }
+
+      if (theme === "bedwars") {
+        // Đảo Bed Wars + Giường đỏ + Ngọc lục bảo
+        drawIsoCube(470, 210, 74, "#10b981", "#065f46", "#047857");
+        drawIsoCube(448, 152, 28, "#ef4444", "#b91c1c", "#991b1b");
+        drawIsoCube(495, 164, 24, "#ffffff", "#cbd5e1", "#94a3b8");
+        drawIsoCube(535, 118, 22, "#34d399", "#059669", "#047857");
+      } else if (theme === "skyblock") {
+        // Đảo Sky Block cỏ xanh + Khối kim cương
+        drawIsoCube(470, 215, 76, "#22c55e", "#78350f", "#451a03");
+        drawIsoCube(440, 148, 26, "#38bdf8", "#0284c7", "#0369a1");
+        drawIsoCube(505, 136, 30, "#10b981", "#047857", "#065f46");
+        drawIsoCube(472, 92, 20, "#fbbf24", "#d97706", "#b45309");
+      } else {
+        // Khối Tinh thể Gcubes vàng VIP
+        drawIsoCube(470, 190, 72, "#fde68a", "#f59e0b", "#b45309");
+        drawIsoCube(400, 128, 26, "#00e5ff", "#0284c7", "#0369a1");
+        drawIsoCube(542, 124, 24, "#fe2c55", "#be123c", "#881337");
+      }
+
+      // Nhãn chế độ
+      ctx.fillStyle = accentColor;
+      ctx.fillRect(36, 42, 195, 34);
+      ctx.fillStyle = "#040814";
+      ctx.font = "900 15px Inter, sans-serif";
+      ctx.fillText(badgeText, 48, 64);
+
+      // Tiêu đề chính
+      ctx.fillStyle = "#ffffff";
+      ctx.font = "900 32px Inter, sans-serif";
+      ctx.fillText(mainTitle, 36, 134);
+
+      // Dòng phụ
+      ctx.fillStyle = "#cbd5e1";
+      ctx.font = "700 18px Inter, sans-serif";
+      ctx.fillText(subLine, 36, 174);
+
+      // Thông tin Shop & Bảo hành
+      ctx.fillStyle = "rgba(6, 11, 23, 0.78)";
+      ctx.fillRect(36, 286, 330, 54);
+      ctx.strokeStyle = accentColor;
+      ctx.lineWidth = 2;
+      ctx.strokeRect(36, 286, 330, 54);
+      ctx.fillStyle = "#ffffff";
+      ctx.font = "800 15px Inter, sans-serif";
+      ctx.fillText("TUẤN ANH BLOCKMAN GO • ZALO 0374132655", 48, 310);
+      ctx.fillStyle = "#fbbf24";
+      ctx.font = "700 13px Inter, sans-serif";
+      ctx.fillText("TikTok: @tuananhdepzaiff • Trắng TT 100%", 48, 330);
+
+      return c.toDataURL("image/png");
+    }
+
+    function createDefaultSampleAccounts() {
+      return [
+        {
+          id: "bm_sample_1",
+          title: "Acc Bed Wars VIP #01 - Full Rune & 2.500 Gcubes",
+          price: "280.000đ",
+          mode: "bedwars",
+          status: "selling",
+          images: [
+            buildVoxelPoster("bedwars", "🛏️ BED WARS VIP", "FULL RUNE LEVEL MAX", "2.500 Gcubes • Hiệu Ứng Kiếm & Giường Hiếm", "#10b981"),
+            buildVoxelPoster("vip", "💎 KHO SKIN & GCUBES", "SKIN HIẾM + KEY VIP", "Trắng thông tin 100% • Đổi mật khẩu ngay", "#fbbf24")
+          ],
+          desc: "• Chế độ Bed Wars: Full bảng Rune chuẩn leo rank, hiệu ứng phá giường cực cháy.\n• Sẵn 2.500 Gcubes + nhiều Skin hiếm, trắng thông tin 100%.",
+          createdAt: Date.now() - 3000
+        },
+        {
+          id: "bm_sample_2",
+          title: "Acc Sky Block Giàu #02 - Đảo Khủng + Full Đồ",
+          price: "190.000đ",
+          mode: "skyblock",
+          status: "selling",
+          images: [
+            buildVoxelPoster("skyblock", "🏝️ SKY BLOCK GIÀU", "ĐẢO FULL KIM CƯƠNG", "Kho tài nguyên cực lớn • Pet VIP & Máy Farm", "#00e5ff")
+          ],
+          desc: "• Đảo Sky Block xây cực đẹp, sẵn nhiều máy farm tự động và kho đồ giá trị.\n• Bảo hành uy tín trọn đời, giao dịch 1s qua Zalo 0374132655.",
+          createdAt: Date.now() - 2000
+        },
+        {
+          id: "bm_sample_3",
+          title: "Acc Full Skin + 6.000 Gcubes #03 - Cực Phẩm VIP",
+          price: "450.000đ",
+          mode: "vip",
+          status: "selling",
+          images: [
+            buildVoxelPoster("vip", "👑 ACC VIP GCUBES", "6.000 GCUBES + SKIN", "Full Skin sự kiện • Chơi ngon Bed Wars & Jailbreak", "#fbbf24"),
+            buildVoxelPoster("bedwars", "⚔️ CHIẾN MỌI CHẾ ĐỘ", "BED WARS + JAILBREAK", "Nhiều vật phẩm giới hạn • Trắng thông tin 100%", "#fe2c55")
+          ],
+          desc: "• Tài khoản VIP sở hữu 6.000 Gcubes, hàng chục bộ Skin hiếm giới hạn.\n• Chiến mượt cả Bed Wars, Sky Block lẫn Jailbreak. Trắng thông tin 100%.",
+          createdAt: Date.now() - 1000
+        }
+      ];
+    }
+
+    const MODE_LABELS = {
+      bedwars: "🛏️ Bed Wars",
+      skyblock: "🏝️ Sky Block",
+      jailbreak: "🚓 Jailbreak",
+      vip: "💎 VIP / Full Skin"
+    };
+
+    const DEFAULT_DB = {
+      updatedAt: 0,
+      config: {
+        shopName: "TUẤN ANH BLOCKMAN GO",
+        zaloPhone: "0374132655",
+        tiktokId: "tuananhdepzaiff",
+        githubRepo: "",
+        introVideoUrl: "",
+        gscCode: "",
+        seoKeywords: "tuananhshopacc, TuanAnhShopAcc, Tuấn Anh Shop Acc, Tuấn Anh Blockman GO, shop acc blockman go, mua acc bed wars, acc sky block giá rẻ, acc jailbreak, nạp gcubes, tuananhdepzaiff, 0374132655"
+      },
+      accounts: createDefaultSampleAccounts(),
+      reviews: [
+        {
+          id: "rv_bm_1",
+          name: "Minh Khang (037xxx)",
+          stars: 5,
+          comment: "Mua acc Bed Wars từ kênh TikTok @tuananhdepzaiff, nhắn Zalo 0374132655 nhận acc sau 1 phút, trắng thông tin uy tín 10/10!",
+          approved: true
+        },
+        {
+          id: "rv_bm_2",
+          name: "Gia Huy (096xxx)",
+          stars: 5,
+          comment: "Acc Sky Block nhiều đồ y như ảnh chụp, chủ shop Tuấn Anh nhiệt tình hướng dẫn đổi mật khẩu luôn.",
+          approved: true
+        }
+      ]
+    };
+
+    let db = JSON.parse(JSON.stringify(DEFAULT_DB));
+    let activeModeFilter = "all";
+    let slideIndexMap = {};
+    let lbImages = [];
+    let lbCurrentIndex = 0;
+    let isFetchingRemote = false;
+    let isPushingGitHub = false;
+    let pendingPushRequest = null;
+    let lastKnownRemoteSha = "";
+    let lastKnownRemoteEtag = "";
+    let lastPushedUpdatedAt = 0;
+    let hasLoadedData = false;
+    let hasCompletedInitialRemoteSync = false;
+    let syncIntervalTimer = null;
+    let preloadedUploadImages = [];
+    let preloadPromise = null;
+    const localOriginalImgCache = {};
+    let liveSyncChannel = null;
+
+    try {
+      if (typeof BroadcastChannel !== "undefined") {
+        liveSyncChannel = new BroadcastChannel("TA_BMG_LIVE_SYNC_1S");
+        liveSyncChannel.onmessage = (ev) => {
+          if (ev && ev.data && ev.data.type === "DB_UPDATED" && ev.data.db) {
+            db = sanitizeDb(ev.data.db);
+            hasCompletedInitialRemoteSync = true;
+            saveDbToLocalCache(db);
+            renderAll();
+          }
+        };
+      }
+    } catch (e) {}
+
+    function sanitizeDb(rawDb) {
+      if (!rawDb || typeof rawDb !== "object") return JSON.parse(JSON.stringify(DEFAULT_DB));
+      return {
+        updatedAt: Number(rawDb.updatedAt) || 0,
+        config: { ...DEFAULT_DB.config, ...(rawDb.config || {}) },
+        accounts: Array.isArray(rawDb.accounts) ? rawDb.accounts : DEFAULT_DB.accounts,
+        reviews: Array.isArray(rawDb.reviews) ? rawDb.reviews : DEFAULT_DB.reviews
+      };
+    }
+
+    function switchNav(tab) {
+      document.getElementById("nav-kho").classList.toggle("active", tab === "kho");
+      document.getElementById("nav-rev").classList.toggle("active", tab === "rev");
+    }
+
+    function setModeFilter(mode) {
+      activeModeFilter = mode;
+      document.querySelectorAll(".filter-pill").forEach(btn => {
+        btn.classList.toggle("active", btn.dataset.mode === mode);
+      });
+      renderAll();
+    }
+
+    let introTimer = null;
+    function initIntro() {
+      const scr = document.getElementById("intro-screen");
+      const vid = document.getElementById("intro-video");
+      if (!scr) return;
+      try {
+        if (db.config && db.config.introVideoUrl && vid) {
+          vid.src = db.config.introVideoUrl;
+          vid.style.display = "block";
+          vid.play().catch(() => {});
+        }
+      } catch (e) {}
+      if (introTimer) clearTimeout(introTimer);
+      introTimer = setTimeout(() => {
+        scr.classList.add("hide");
+      }, 2800);
+    }
+
+    function safeGetStorage(key) {
+      try { return localStorage.getItem(key); } catch (e) { return null; }
+    }
+
+    function safeSetStorage(key, val) {
+      try { localStorage.setItem(key, val); return true; } catch (e) { return false; }
+    }
+
+    function utf8ToBase64(str) {
+      const bytes = new TextEncoder().encode(str);
+      let bin = "";
+      const chunk = 0x8000;
+      for (let i = 0; i < bytes.length; i += chunk) {
+        bin += String.fromCharCode.apply(null, bytes.subarray(i, i + chunk));
+      }
+      return btoa(bin);
+    }
+
+    function base64ToUtf8(b64) {
+      const clean = String(b64).replace(/\s+/g, "");
+      const bin = atob(clean);
+      const bytes = new Uint8Array(bin.length);
+      for (let i = 0; i < bin.length; i++) {
+        bytes[i] = bin.charCodeAt(i);
+      }
+      return new TextDecoder("utf-8").decode(bytes);
+    }
+
+    function normalizeRepoString(val) {
+      if (!val) return "";
+      let s = String(val).trim();
+      s = s.replace(/^https?:\/\/(www\.)?github\.com\//i, "");
+      s = s.replace(/\.git$/i, "").replace(/^\/+|\/+$/g, "");
+      if (s && !s.includes("/") && s.endsWith(".github.io")) {
+        const user = s.replace(/\.github\.io$/i, "");
+        return `${user}/${s}`;
+      }
+      const parts = s.split("/").filter(Boolean);
+      if (parts.length >= 2) return `${parts[0]}/${parts[1]}`;
+      return s;
+    }
+
+    function detectGithubRepoString() {
+      const inp = document.getElementById("gh-repo");
+      if (inp && inp.value.trim()) return normalizeRepoString(inp.value.trim());
+      try {
+        const g = JSON.parse(safeGetStorage("TA_BMG_GH_TOKEN") || "{}");
+        if (g.repo && g.repo.trim()) return normalizeRepoString(g.repo.trim());
+      } catch (e) {}
+      const host = window.location.hostname || "";
+      const pathParts = (window.location.pathname || "").split("/").filter(Boolean);
+      if (host.endsWith(".github.io")) {
+        const user = host.replace(".github.io", "");
+        const repoName = pathParts[0] || `${user}.github.io`;
+        return `${user}/${repoName}`;
+      }
+      if (db.config && db.config.githubRepo) return normalizeRepoString(db.config.githubRepo);
+      return "";
+    }
+
+    function hasAdminTokenSaved() {
+      try {
+        const g = JSON.parse(safeGetStorage("TA_BMG_GH_TOKEN") || "{}");
+        return Boolean(g.token && String(g.token).trim());
+      } catch (e) {
+        return false;
+      }
+    }
+
+    // ================= INDEXEDDB CACHE DUNG LƯỢNG LỚN =================
+    function openShopIdb() {
+      return new Promise((resolve) => {
+        try {
+          if (typeof indexedDB === "undefined") return resolve(null);
+          const req = indexedDB.open("TA_BMG_CACHE_IDB_V1", 1);
+          req.onupgradeneeded = (e) => {
+            const idb = e.target.result;
+            if (!idb.objectStoreNames.contains("store")) {
+              idb.createObjectStore("store");
+            }
+          };
+          req.onsuccess = (e) => resolve(e.target.result);
+          req.onerror = () => resolve(null);
+        } catch (e) {
+          resolve(null);
+        }
+      });
+    }
+
+    async function saveDbToLocalCache(dataObj) {
+      if (!dataObj) return;
+      const clean = sanitizeDb(dataObj);
+      safeSetStorage("TA_BMG_LAST_UPDATED_AT", String(clean.updatedAt || 0));
+      try {
+        const str = JSON.stringify(clean);
+        if (str.length < 2500000) {
+          safeSetStorage("TA_BMG_STORE_DB_V1", str);
+        } else {
+          localStorage.removeItem("TA_BMG_STORE_DB_V1");
+        }
+      } catch (e) {
+        try { localStorage.removeItem("TA_BMG_STORE_DB_V1"); } catch (err) {}
+      }
+      try {
+        const idb = await openShopIdb();
+        if (idb) {
+          const tx = idb.transaction("store", "readwrite");
+          tx.objectStore("store").put(clean, "MAIN_DB");
+        }
+      } catch (e) {}
+    }
+
+    async function loadDbFromLocalCache() {
+      const expectedTime = Number(safeGetStorage("TA_BMG_LAST_UPDATED_AT") || 0);
+      try {
+        const idb = await openShopIdb();
+        if (idb) {
+          const fromIdb = await new Promise((resolve) => {
+            const tx = idb.transaction("store", "readonly");
+            const req = tx.objectStore("store").get("MAIN_DB");
+            req.onsuccess = () => resolve(req.result || null);
+            req.onerror = () => resolve(null);
+          });
+          if (fromIdb && typeof fromIdb === "object" && (fromIdb.updatedAt || 0) >= expectedTime) {
+            return sanitizeDb(fromIdb);
+          }
+        }
+      } catch (e) {}
+      try {
+        const raw = safeGetStorage("TA_BMG_STORE_DB_V1");
+        if (raw) {
+          const parsed = JSON.parse(raw);
+          if (parsed && (parsed.updatedAt || 0) >= expectedTime) {
+            return sanitizeDb(parsed);
+          }
+        }
+      } catch (e) {}
+      return null;
+    }
+
+    function getGithubApiHeaders(includeAuth) {
+      const headers = { "Accept": "application/vnd.github.v3+json" };
+      if (includeAuth) {
+        try {
+          const g = JSON.parse(safeGetStorage("TA_BMG_GH_TOKEN") || "{}");
+          if (g.token && g.token.trim()) {
+            headers["Authorization"] = `Bearer ${g.token.trim()}`;
+          }
+        } catch (e) {}
+      }
+      return headers;
+    }
+
+    function rememberRemoteSha(sha) {
+      if (sha && /^[a-f0-9]{40}$/i.test(String(sha).trim())) {
+        lastKnownRemoteSha = String(sha).trim();
+        safeSetStorage("TA_BMG_GH_LAST_SHA", lastKnownRemoteSha);
+      }
+    }
+
+    async function handleAccImgError(imgEl) {
+      if (!imgEl || imgEl.dataset.fallbackTried === "1") return;
+      imgEl.dataset.fallbackTried = "1";
+      const src = imgEl.getAttribute("src") || "";
+      if (localOriginalImgCache[src]) {
+        imgEl.src = localOriginalImgCache[src];
+        return;
+      }
+      const shaMatch = src.match(/[?&]sha=([a-f0-9]{40})/i);
+      const repo = detectGithubRepoString();
+      if (shaMatch && shaMatch[1] && repo) {
+        try {
+          const res = await fetch(`https://api.github.com/repos/${repo}/git/blobs/${shaMatch[1]}`, {
+            headers: getGithubApiHeaders(true)
+          });
+          if (res.ok) {
+            const data = await res.json();
+            if (data && data.content) {
+              const ext = src.split("?")[0].split(".").pop().toLowerCase();
+              const mime = ext === "png" ? "image/png" : ext === "webp" ? "image/webp" : ext === "gif" ? "image/gif" : "image/jpeg";
+              const dataUrl = `data:${mime};base64,${String(data.content).replace(/\s+/g, "")}`;
+              localOriginalImgCache[src] = dataUrl;
+              imgEl.src = dataUrl;
+              return;
+            }
+          }
+        } catch (e) {}
+      }
+      if (src.startsWith("http")) {
+        const sep = src.includes("?") ? "&" : "?";
+        imgEl.src = src + sep + "retry=" + Date.now();
+      }
+    }
+
+    // ================= ĐỒNG BỘ DỮ LIỆU THỜI GIAN THỰC TỪ GITHUB =================
+    async function fetchLatestRemoteDb(onlyIfChanged) {
+      const repo = detectGithubRepoString();
+      const bust = Date.now() + "_" + Math.random().toString(36).slice(2, 7);
+      const authHeaders = getGithubApiHeaders(true);
+
+      if (repo && repo.includes("/")) {
+        try {
+          const reqHeaders = { ...authHeaders };
+          if (onlyIfChanged && lastKnownRemoteEtag) {
+            reqHeaders["If-None-Match"] = lastKnownRemoteEtag;
+          }
+          const apiRes = await fetch(`https://api.github.com/repos/${repo}/contents/data.json?t=${bust}`, {
+            headers: reqHeaders,
+            cache: "no-store"
+          });
+
+          if (apiRes.status === 304 && onlyIfChanged) return null;
+
+          if (apiRes.ok) {
+            const etag = apiRes.headers.get("ETag");
+            if (etag) lastKnownRemoteEtag = etag;
+            const meta = await apiRes.json();
+            if (meta && meta.sha) {
+              if (onlyIfChanged && lastKnownRemoteSha && meta.sha === lastKnownRemoteSha) return null;
+              rememberRemoteSha(meta.sha);
+            }
+            if (meta && meta.content) {
+              const parsed = JSON.parse(base64ToUtf8(meta.content));
+              if (parsed && typeof parsed === "object") return sanitizeDb(parsed);
+            }
+            if (meta && meta.sha) {
+              const blobRes = await fetch(`https://api.github.com/repos/${repo}/git/blobs/${meta.sha}`, {
+                headers: { ...authHeaders, "Accept": "application/vnd.github.v3.raw" },
+                cache: "no-store"
+              });
+              if (blobRes.ok) {
+                const parsed = await blobRes.json();
+                if (parsed && typeof parsed === "object") return sanitizeDb(parsed);
+              }
+            }
+          } else if (apiRes.status === 403 || apiRes.status === 422) {
+            const sha = await getExistingFileSha(repo, "data.json", authHeaders, true);
+            if (sha) {
+              if (onlyIfChanged && lastKnownRemoteSha && sha === lastKnownRemoteSha) return null;
+              rememberRemoteSha(sha);
+              const blobRes = await fetch(`https://api.github.com/repos/${repo}/git/blobs/${sha}`, {
+                headers: { ...authHeaders, "Accept": "application/vnd.github.v3.raw" },
+                cache: "no-store"
+              });
+              if (blobRes.ok) {
+                const parsed = await blobRes.json();
+                if (parsed && typeof parsed === "object") return sanitizeDb(parsed);
+              }
+            }
+          }
+        } catch (e) {}
+      }
+
+      if (onlyIfChanged && lastKnownRemoteSha) return null;
+
+      const fallbackCandidates = [];
+      if (repo && repo.includes("/")) {
+        ["main", "master"].forEach(branch => {
+          fallbackCandidates.push((async () => {
+            try {
+              const r = await fetch(`https://raw.githubusercontent.com/${repo}/${branch}/data.json?t=${bust}`, { cache: "no-store" });
+              if (r.ok) return await r.json();
+            } catch (e) {}
+            return null;
+          })());
+        });
+      }
+
+      if (window.location.protocol === "http:" || window.location.protocol === "https:") {
+        fallbackCandidates.push((async () => {
+          try {
+            const remoteUrl = new URL("data.json?t=" + bust, window.location.href).href;
+            const r = await fetch(remoteUrl, {
+              cache: "no-store",
+              headers: { "Pragma": "no-cache", "Cache-Control": "no-cache" }
+            });
+            if (r.ok) return await r.json();
+          } catch (e) {}
+          return null;
+        })());
+      }
+
+      const results = await Promise.all(fallbackCandidates);
+      let best = null;
+      for (const item of results) {
+        if (item && typeof item === "object" && (Array.isArray(item.accounts) || item.config)) {
+          const clean = sanitizeDb(item);
+          if (!best || (clean.updatedAt || 0) >= (best.updatedAt || 0)) {
+            best = clean;
+          }
+        }
+      }
+      return best;
+    }
+
+    function hasInlineBase64Images(accountsList) {
+      if (!Array.isArray(accountsList)) return false;
+      return accountsList.some(acc => {
+        const imgs = getAccImages(acc);
+        return imgs.some(u => typeof u === "string" && u.startsWith("data:image/") && u.length > 50000);
+      });
+    }
+
+    async function syncFromRemote(isInitial) {
+      if (isFetchingRemote || isPushingGitHub) return;
+      isFetchingRemote = true;
+      try {
+        const isAdmin = hasAdminTokenSaved();
+        const hasUnsyncedLocal = isAdmin && safeGetStorage("TA_BMG_LOCAL_UNSYNCED") === "1";
+        if (hasUnsyncedLocal && !isInitial) {
+          isFetchingRemote = false;
+          await pushGitHub(true, "Tự động đồng bộ kho Acc");
+          return;
+        }
+
+        const remoteDb = await fetchLatestRemoteDb(!isInitial);
+        if (remoteDb) {
+          const localTime = Math.max(db.updatedAt || 0, lastPushedUpdatedAt || 0);
+          const remoteTime = remoteDb.updatedAt || 0;
+
+          if (!isAdmin || (!hasUnsyncedLocal && remoteTime >= localTime)) {
+            const changed = !hasCompletedInitialRemoteSync ||
+                            JSON.stringify(remoteDb.accounts) !== JSON.stringify(db.accounts) ||
+                            JSON.stringify(remoteDb.reviews) !== JSON.stringify(db.reviews) ||
+                            JSON.stringify(remoteDb.config) !== JSON.stringify(db.config) ||
+                            isInitial;
+            db = remoteDb;
+            hasCompletedInitialRemoteSync = true;
+            await saveDbToLocalCache(db);
+            if (changed) renderAll();
+
+            if (isAdmin && isInitial && hasInlineBase64Images(db.accounts)) {
+              isFetchingRemote = false;
+              await pushGitHub(true, "Tối ưu ảnh gốc 1s");
+              return;
+            }
+          } else if (hasUnsyncedLocal && (db.updatedAt || 0) > remoteTime) {
+            hasCompletedInitialRemoteSync = true;
+            isFetchingRemote = false;
+            await pushGitHub(true, "Tự động đồng bộ kho Acc");
+            return;
+          }
+        } else {
+          if (!hasCompletedInitialRemoteSync) {
+            hasCompletedInitialRemoteSync = true;
+            renderAll();
+          }
+        }
+      } catch (e) {
+        if (!hasCompletedInitialRemoteSync) {
+          hasCompletedInitialRemoteSync = true;
+          renderAll();
+        }
+      }
+      isFetchingRemote = false;
+    }
+
+    async function loadData() {
+      if (hasLoadedData) return;
+      hasLoadedData = true;
+
+      const savedSha = safeGetStorage("TA_BMG_GH_LAST_SHA");
+      if (savedSha) lastKnownRemoteSha = savedSha;
+
+      const cached = await loadDbFromLocalCache();
+      if (cached) {
+        db = cached;
+        hasCompletedInitialRemoteSync = true;
+      }
+
+      renderAll();
+      initIntro();
+      await syncFromRemote(true);
+
+      if (syncIntervalTimer) clearInterval(syncIntervalTimer);
+      syncIntervalTimer = setInterval(() => {
+        if (!document.hidden) syncFromRemote(false);
+      }, 2000);
+
+      window.addEventListener("focus", () => syncFromRemote(false));
+      document.addEventListener("visibilitychange", () => {
+        if (!document.hidden) syncFromRemote(false);
+      });
+      window.addEventListener("storage", (ev) => {
+        if (ev.key === "TA_BMG_STORE_DB_V1" && ev.newValue) {
+          try {
+            db = sanitizeDb(JSON.parse(ev.newValue));
+            hasCompletedInitialRemoteSync = true;
+            renderAll();
+          } catch (e) {}
+        }
+      });
+    }
+
+    function getAccImages(acc) {
+      if (Array.isArray(acc.images) && acc.images.length > 0) return acc.images;
+      if (acc.image) return [acc.image];
+      return [];
+    }
+
+    function renderAll() {
+      const c = { ...DEFAULT_DB.config, ...(db.config || {}) };
+      const cleanPhone = (c.zaloPhone || "0374132655").replace(/\s+/g, "");
+      const cleanTikTok = (c.tiktokId || "tuananhdepzaiff").replace(/^@+/, "").trim();
+      const zLink = `https://zalo.me/${cleanPhone}`;
+      const ttLink = `https://www.tiktok.com/@${cleanTikTok}`;
+
+      // Cập nhật toàn bộ thông tin Shop, Zalo & TikTok trên giao diện
+      document.getElementById("intro-title-txt").innerText = c.shopName;
+      document.getElementById("intro-phone-txt").innerText = cleanPhone;
+      document.getElementById("intro-tiktok-txt").innerText = "@" + cleanTikTok;
+
+      document.getElementById("header-name").innerText = c.shopName;
+      document.getElementById("banner-shop-name").innerText = c.shopName;
+      document.getElementById("top-phone").innerText = cleanPhone;
+      document.getElementById("sub-phone").innerText = cleanPhone;
+      document.getElementById("top-tiktok").innerText = "@" + cleanTikTok;
+      document.getElementById("sub-tiktok").innerText = "@" + cleanTikTok;
+      document.getElementById("promo-tiktok-handle").innerText = "@" + cleanTikTok;
+      document.getElementById("promo-zalo-phone").innerText = cleanPhone;
+      document.getElementById("adm-welcome-title").innerText = `🧊 Quản Trị Viên: ${c.shopName} (Zalo: ${cleanPhone})`;
+
+      document.getElementById("live-ticker-txt").innerHTML =
+        `🧊 Chào mừng đến với <strong>${esc(c.shopName)}</strong> — Kho Acc Bed Wars, Sky Block, Jailbreak, Skin VIP &amp; Gcubes uy tín 100%! &nbsp;&nbsp;•&nbsp;&nbsp; 💬 Zalo Mua Acc 1s: <strong>${esc(cleanPhone)}</strong> &nbsp;&nbsp;•&nbsp;&nbsp; 🎵 Follow TikTok <strong>@${esc(cleanTikTok)}</strong> săn Acc giá rẻ mỗi ngày!`;
+
+      // Cập nhật tất cả đường link Zalo & TikTok
+      ["top-live-zalo", "top-zalo-btn", "banner-zalo-btn", "promo-zalo-btn", "float-zalo"].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.href = zLink;
+      });
+      ["top-live-tiktok", "top-tiktok-btn", "banner-tiktok-btn", "promo-tiktok-btn", "float-tiktok"].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.href = ttLink;
+      });
+
+      document.getElementById("banner-zalo-btn").innerText = `💬 ZALO: ${cleanPhone}`;
+      document.getElementById("banner-tiktok-btn").innerText = `🎵 TIKTOK: @${cleanTikTok}`;
+      document.getElementById("float-zalo").innerText = `💬 Zalo: ${cleanPhone}`;
+      document.getElementById("float-tiktok").innerText = `🎵 TikTok: @${cleanTikTok}`;
+
+      // Cập nhật SEO & Google Search Console
+      if (c.gscCode) document.getElementById("meta-gsc").setAttribute("content", c.gscCode);
+      if (c.seoKeywords) document.getElementById("meta-keys").setAttribute("content", c.seoKeywords);
+      document.getElementById("page-title").innerText = `TuanAnhShopAcc - ${c.shopName} | Kho Acc Blockman GO Uy Tín 24/7`;
+
+      // Lọc & sắp xếp danh sách Acc
+      const allAccounts = Array.isArray(db.accounts) ? db.accounts : [];
+      const filtered = activeModeFilter === "all"
+        ? allAccounts
+        : allAccounts.filter(a => (a.mode || "vip") === activeModeFilter);
+      const sorted = [...filtered].sort((a, b) => (b.createdAt || 0) - (a.createdAt || 0));
+      const gridEl = document.getElementById("acc-grid-box");
+
+      if (sorted.length === 0) {
+        gridEl.innerHTML = `
+          <div class="card-panel" style="grid-column: 1 / -1; text-align: center; padding: 32px 18px; border-color: rgba(16,185,129,0.3);">
+            <div style="font-size: 2rem; margin-bottom: 8px;">🧊</div>
+            <div style="font-size: 1rem; font-weight: 800; color: var(--emerald-bright); margin-bottom: 6px;">
+              Hiện Chưa Có Acc Ở Mục Này
+            </div>
+            <div style="font-size: 0.82rem; color: var(--text-sub); margin-bottom: 14px;">
+              Nhắn tin trực tiếp Zalo ${esc(cleanPhone)} hoặc xem TikTok @${esc(cleanTikTok)} để săn Acc Blockman GO mới nhất!
+            </div>
+            <a href="${zLink}" target="_blank" class="btn-explore" style="text-decoration:none;">💬 Nhắn Zalo Mua Acc Ngay</a>
+          </div>
+        `;
+      } else {
+        gridEl.innerHTML = sorted.map(item => {
+          const imgs = getAccImages(item);
+          const curIdx = slideIndexMap[item.id] || 0;
+          const safeIdx = curIdx < imgs.length ? curIdx : 0;
+          const currentImg = imgs[safeIdx] || "";
+          const st = item.status || "selling";
+          const modeLabel = MODE_LABELS[item.mode] || "🧊 Blockman GO";
+
+          const msg = encodeURIComponent(
+            st === "sold"
+              ? `Chào Shop ${c.shopName}, mình thấy [${item.title}] đã bán, shop còn acc Blockman GO tương tự không ạ?`
+              : st === "deposited"
+                ? `Chào Shop ${c.shopName}, mình muốn hỏi về [${item.title}] (Đã cọc) giá ${item.price}`
+                : `Chào Shop ${c.shopName}, mình muốn mua [${item.title}] giá ${item.price}`
+          );
+
+          const topBadgeHtml = st === "sold"
+            ? `<span class="badge-new-acc badge-status-sold">🔴 ĐÃ BÁN</span>`
+            : st === "deposited"
+              ? `<span class="badge-new-acc badge-status-deposited">🟡 ĐÃ CỌC</span>`
+              : `<span class="badge-new-acc">🟢 ĐANG BÁN</span>`;
+
+          const centerStampHtml = st === "sold"
+            ? `<div class="acc-status-stamp sold">❌ ĐÃ BÁN</div>`
+            : st === "deposited"
+              ? `<div class="acc-status-stamp deposited">⏳ ĐÃ NHẬN CỌC</div>`
+              : "";
+
+          const buyBtnHtml = st === "sold"
+            ? `<a href="${zLink}?text=${msg}" target="_blank" class="btn-zalo-buy btn-status-sold">🔴 Đã Bán • Hỏi Acc Khác</a>`
+            : st === "deposited"
+              ? `<a href="${zLink}?text=${msg}" target="_blank" class="btn-zalo-buy btn-status-deposited">⏳ Đã Cọc • Hỏi Zalo</a>`
+              : `<a href="${zLink}?text=${msg}" target="_blank" class="btn-zalo-buy">⚡ Mua Qua Zalo</a>`;
+
+          return `
+            <div class="acc-item">
+              <div class="acc-thumb">
+                ${topBadgeHtml}
+                <span class="badge-img-count">🖼️ ${safeIdx + 1}/${imgs.length} ảnh</span>
+                <span class="badge-mode-tag">${modeLabel}</span>
+                ${centerStampHtml}
+                ${imgs.length > 1 ? `
+                  <button class="slide-nav-btn prev" onclick="changeCardSlide('${item.id}', -1, event)">❮</button>
+                  <button class="slide-nav-btn next" onclick="changeCardSlide('${item.id}', 1, event)">❯</button>
+                ` : ""}
+                <img src="${localOriginalImgCache[currentImg] || currentImg}" alt="${esc(item.title)}" onerror="handleAccImgError(this)" onclick="openFullGallery('${item.id}', ${safeIdx})" />
+                <span class="badge-fullscreen">🔍 Phóng to HD</span>
+              </div>
+              ${imgs.length > 1 ? `
+                <div class="acc-mini-thumbs">
+                  ${imgs.map((u, idx) => `
+                    <img src="${localOriginalImgCache[u] || u}" class="${idx === safeIdx ? 'active' : ''}" onerror="handleAccImgError(this)" onclick="setCardSlide('${item.id}', ${idx})" alt="thumb" />
+                  `).join("")}
+                </div>
+              ` : ""}
+              <div class="acc-info">
+                <div class="acc-name">${esc(item.title)}</div>
+                <div class="acc-detail">${esc(item.desc)}</div>
+                <div class="acc-foot">
+                  <span class="acc-cost">${esc(item.price)}</span>
+                  ${buyBtnHtml}
+                </div>
+              </div>
+            </div>
+          `;
+        }).join("");
+      }
+
+      const okRevs = (db.reviews || []).filter(x => x.approved);
+      document.getElementById("approved-reviews-box").innerHTML = okRevs.length
+        ? okRevs.map(r => `
+            <div class="rev-card">
+              <div style="display:flex; justify-content:space-between; font-size:0.82rem; margin-bottom:4px;">
+                <strong>${esc(r.name)}</strong>
+                <span style="color:var(--gold);">${"★".repeat(r.stars || 5)}</span>
+              </div>
+              <div style="font-size:0.8rem; color:var(--text-sub);">${esc(r.comment)}</div>
+            </div>
+          `).join("")
+        : `<p style="font-size:0.8rem; color:var(--text-sub);">Chưa có đánh giá nào được duyệt.</p>`;
+
+      renderAdminLists();
+    }
+
+    function changeCardSlide(accId, step, ev) {
+      if (ev) ev.stopPropagation();
+      const acc = (db.accounts || []).find(x => x.id === accId);
+      if (!acc) return;
+      const imgs = getAccImages(acc);
+      const cur = slideIndexMap[accId] || 0;
+      slideIndexMap[accId] = (cur + step + imgs.length) % imgs.length;
+      renderAll();
+    }
+
+    function setCardSlide(accId, idx) {
+      slideIndexMap[accId] = idx;
+      renderAll();
+    }
+
+    function openFullGallery(accId, startIndex) {
+      const acc = (db.accounts || []).find(x => x.id === accId);
+      if (!acc) return;
+      lbImages = getAccImages(acc);
+      lbCurrentIndex = startIndex || 0;
+      updateLightboxView();
+      document.getElementById("lightbox-modal").classList.add("open");
+    }
+
+    function stepLightbox(step) {
+      if (!lbImages.length) return;
+      lbCurrentIndex = (lbCurrentIndex + step + lbImages.length) % lbImages.length;
+      updateLightboxView();
+    }
+
+    function updateLightboxView() {
+      const targetEl = document.getElementById("lightbox-target");
+      const rawUrl = lbImages[lbCurrentIndex] || "";
+      targetEl.dataset.fallbackTried = "0";
+      targetEl.onerror = function() { handleAccImgError(this); };
+      targetEl.src = localOriginalImgCache[rawUrl] || rawUrl;
+      document.getElementById("lightbox-counter").innerText = `${lbCurrentIndex + 1} / ${lbImages.length}`;
+    }
+
+    function closeFullImg() {
+      document.getElementById("lightbox-modal").classList.remove("open");
+    }
+
+    async function sendReview() {
+      const name = document.getElementById("cus-name").value.trim();
+      const stars = Number(document.getElementById("cus-stars").value);
+      const comment = document.getElementById("cus-text").value.trim();
+      if (!name || !comment) return toast("⚠️ Vui lòng nhập tên và nội dung nhận xét!");
+      db.reviews.unshift({ id: "rv_" + Date.now(), name, stars, comment, approved: false });
+      db.updatedAt = Date.now();
+      await saveDbToLocalCache(db);
+      renderAll();
+      document.getElementById("cus-name").value = "";
+      document.getElementById("cus-text").value = "";
+      if (hasAdminTokenSaved()) {
+        await pushGitHub(true, "Đã gửi đánh giá");
+      }
+      toast("✅ Đã gửi đánh giá! Chờ Admin phê duyệt để hiển thị công khai.");
+    }
+
+    // ================= QUẢN TRỊ ADMIN & BẢO MẬT MẬT KHẨU =================
+    function hashAdmPw(str) {
+      let h1 = (0xdeadbeef ^ str.length) >>> 0;
+      let h2 = (0x41c6ce57 ^ str.length) >>> 0;
+      for (let i = 0; i < str.length; i++) {
+        const ch = str.charCodeAt(i);
+        h1 = Math.imul(h1 ^ ch, 2654435761) >>> 0;
+        h2 = Math.imul(h2 ^ ch, 1597334677) >>> 0;
+      }
+      h1 = (Math.imul(h1 ^ (h1 >>> 16), 2246822507) ^ Math.imul(h2 ^ (h2 >>> 13), 3266489909)) >>> 0;
+      h2 = (Math.imul(h2 ^ (h2 >>> 16), 2246822507) ^ Math.imul(h1 ^ (h1 >>> 13), 3266489909)) >>> 0;
+      return h2.toString(16).padStart(8, "0") + h1.toString(16).padStart(8, "0");
+    }
+
+    // Mật khẩu mặc định được băm một chiều (0374132655)
+    const DEFAULT_ADM_HASH = hashAdmPw(String.fromCharCode(48, 51, 55, 52, 49, 51, 50, 54, 53, 53));
+
+    function getActiveAdmHash() {
+      const localHash = safeGetStorage("TA_BMG_ADM_HASH");
+      if (localHash) return localHash;
+      if (db.config && db.config.adminPassHash) return db.config.adminPassHash;
+      return DEFAULT_ADM_HASH;
+    }
+
+    function autoDetectGithubRepo() {
+      const detected = detectGithubRepoString();
+      if (detected) {
+        document.getElementById("gh-repo").value = detected;
+        saveGithubCreds();
+        toast("🔍 Đã tự nhận diện Repo: " + detected);
+      } else {
+        toast("ℹ️ Hãy nhập dạng username/ten-repo (VD: tuananh/blockmango-shop)");
+      }
+    }
+
+    function saveGithubCreds() {
+      const tokenEl = document.getElementById("gh-token");
+      const repoEl = document.getElementById("gh-repo");
+      if (!tokenEl || !repoEl) return;
+      const token = tokenEl.value.trim();
+      const repo = normalizeRepoString(repoEl.value.trim()) || detectGithubRepoString();
+      safeSetStorage("TA_BMG_GH_TOKEN", JSON.stringify({ token, repo }));
+    }
+
+    function openAdmin() {
+      document.getElementById("adm-overlay").classList.add("open");
+      let g = {};
+      try { g = JSON.parse(safeGetStorage("TA_BMG_GH_TOKEN") || "{}"); } catch (e) {}
+      document.getElementById("gh-token").value = g.token || "";
+      document.getElementById("gh-repo").value = g.repo || detectGithubRepoString();
+    }
+
+    function closeAdmin() {
+      document.getElementById("adm-overlay").classList.remove("open");
+    }
+
+    function verifyAdmin() {
+      const inputPw = document.getElementById("adm-pw").value.trim();
+      if (!inputPw) return toast("⚠️ Vui lòng nhập mật khẩu Admin!");
+      if (hashAdmPw(inputPw) === getActiveAdmHash()) {
+        document.getElementById("adm-pw").value = "";
+        document.getElementById("adm-login-step").style.display = "none";
+        document.getElementById("adm-main-step").style.display = "block";
+        document.getElementById("adm-cfg-name").value = db.config.shopName || "TUẤN ANH BLOCKMAN GO";
+        document.getElementById("adm-cfg-phone").value = db.config.zaloPhone || "0374132655";
+        document.getElementById("adm-cfg-tiktok").value = db.config.tiktokId || "tuananhdepzaiff";
+        document.getElementById("adm-cfg-video").value = db.config.introVideoUrl || "";
+        document.getElementById("adm-cfg-gsc").value = db.config.gscCode || "";
+        document.getElementById("adm-cfg-seo").value = db.config.seoKeywords || "";
+        if (!document.getElementById("gh-repo").value.trim()) {
+          document.getElementById("gh-repo").value = detectGithubRepoString();
+        }
+        renderAdminLists();
+        toast("🧊 Chào mừng Chủ Shop TUẤN ANH BLOCKMAN GO!");
+      } else {
+        toast("❌ Mật khẩu Admin không đúng!");
+      }
+    }
+
+    function logoutAdmin() {
+      document.getElementById("adm-pw").value = "";
+      document.getElementById("adm-main-step").style.display = "none";
+      document.getElementById("adm-login-step").style.display = "block";
+      closeAdmin();
+      toast("🔒 Đã khóa bảng Quản Trị Admin!");
+    }
+
+    async function changeAdminPassword() {
+      const newPw = document.getElementById("adm-new-pw").value.trim();
+      const confirmPw = document.getElementById("adm-confirm-pw").value.trim();
+      if (!newPw) return toast("⚠️ Vui lòng nhập mật khẩu Admin mới!");
+      if (newPw.length < 4) return toast("⚠️ Mật khẩu mới phải có ít nhất 4 ký tự!");
+      if (newPw !== confirmPw) return toast("❌ Mật khẩu xác nhận không khớp!");
+
+      const newHash = hashAdmPw(newPw);
+      safeSetStorage("TA_BMG_ADM_HASH", newHash);
+      db.config = { ...(db.config || {}), adminPassHash: newHash };
+      document.getElementById("adm-new-pw").value = "";
+      document.getElementById("adm-confirm-pw").value = "";
+      await saveAndAutoSync("Đã đổi mật khẩu Admin mới");
+    }
+
+    function renderAdminLists() {
+      const rBox = document.getElementById("adm-rev-list");
+      if (rBox) {
+        rBox.innerHTML = (db.reviews || []).map(r => `
+          <div class="rev-card" style="display:flex; justify-content:space-between; align-items:center; gap:8px;">
+            <div style="font-size:0.76rem;">
+              <strong>${esc(r.name)}</strong> (${r.approved ? '<span style="color:#34d399;">Đã duyệt</span>' : '<span style="color:#fbbf24;">Chờ duyệt</span>'})
+              <div style="color:var(--text-sub);">${esc(r.comment)}</div>
+            </div>
+            <div style="display:flex; gap:5px; flex-shrink:0;">
+              ${!r.approved ? `<button class="btn-adm-open" onclick="approveRv('${r.id}')">Duyệt</button>` : ''}
+              <button class="btn-adm-open" style="border-color:#ef4444; color:#ef4444;" onclick="delRv('${r.id}')">Xóa</button>
+            </div>
+          </div>
+        `).join("") || `<p style="font-size:0.76rem; color:var(--text-sub);">Chưa có đánh giá nào.</p>`;
+      }
+
+      const aBox = document.getElementById("adm-acc-list");
+      if (aBox) {
+        aBox.innerHTML = (db.accounts || []).map(a => {
+          const count = getAccImages(a).length;
+          const st = a.status || "selling";
+          return `
+            <div class="rev-card" style="display:flex; justify-content:space-between; align-items:center; gap:8px; flex-wrap:wrap;">
+              <div style="font-size:0.76rem; flex:1; min-width:140px;">
+                <strong>${esc(a.title)}</strong> (${count} ảnh) - <span style="color:var(--gold);">${esc(a.price)}</span>
+              </div>
+              <div style="display:flex; align-items:center; gap:6px;">
+                <select class="adm-status-select" onchange="setAccStatus('${a.id}', this.value)">
+                  <option value="selling" ${st === "selling" ? "selected" : ""}>🟢 Đang bán</option>
+                  <option value="deposited" ${st === "deposited" ? "selected" : ""}>🟡 Đã cọc</option>
+                  <option value="sold" ${st === "sold" ? "selected" : ""}>🔴 Đã bán</option>
+                </select>
+                <button class="btn-adm-open" style="border-color:#ef4444; color:#ef4444;" onclick="delAcc('${a.id}')">Xóa</button>
+              </div>
+            </div>
+          `;
+        }).join("") || `<p style="font-size:0.76rem; color:var(--text-sub);">Kho Acc đang trống.</p>`;
+      }
+    }
+
+    function toBase64File(file) {
+      return new Promise((res, rej) => {
+        const rd = new FileReader();
+        rd.onload = (e) => res(e.target.result);
+        rd.onerror = rej;
+        rd.readAsDataURL(file);
+      });
+    }
+
+    async function previewSelectedImages(input) {
+      const box = document.getElementById("adm-img-preview");
+      box.innerHTML = "";
+      preloadedUploadImages = [];
+      preloadPromise = null;
+      if (!input.files || !input.files.length) return;
+      const filesArr = Array.from(input.files);
+      preloadPromise = Promise.all(filesArr.map(file => toBase64File(file)));
+      const loaded = await preloadPromise;
+      preloadedUploadImages = loaded;
+      for (const b64 of loaded) {
+        const im = document.createElement("img");
+        im.src = b64;
+        box.appendChild(im);
+      }
+    }
+
+    async function createAcc() {
+      const title = document.getElementById("adm-acc-name").value.trim();
+      const price = document.getElementById("adm-acc-price").value.trim();
+      const mode = document.getElementById("adm-acc-mode").value || "bedwars";
+      const status = document.getElementById("adm-acc-status").value || "selling";
+      const desc = document.getElementById("adm-acc-desc").value.trim();
+      const f = document.getElementById("adm-acc-file");
+      const u = document.getElementById("adm-acc-url").value.trim();
+      if (!title || !price) return toast("⚠️ Vui lòng nhập đủ Tên Acc và Giá bán!");
+
+      let images = [];
+      if (preloadPromise) {
+        try {
+          const readyImgs = await preloadPromise;
+          if (Array.isArray(readyImgs) && readyImgs.length > 0) images.push(...readyImgs);
+        } catch (e) {}
+      } else if (preloadedUploadImages.length > 0) {
+        images.push(...preloadedUploadImages);
+      } else if (f.files && f.files.length > 0) {
+        const filesArr = Array.from(f.files);
+        const loaded = await Promise.all(filesArr.map(file => toBase64File(file)));
+        images.push(...loaded);
+      }
+      if (u) {
+        const urlList = u.split(",").map(s => s.trim()).filter(Boolean);
+        images.push(...urlList);
+      }
+
+      if (images.length === 0) return toast("⚠️ Hãy chọn ít nhất 1 ảnh từ máy hoặc dán Link ảnh!");
+
+      db.accounts.unshift({
+        id: "acc_" + Date.now(),
+        title,
+        price,
+        mode,
+        status,
+        images,
+        image: images[0],
+        desc: desc || `Liên hệ Zalo ${db.config.zaloPhone || "0374132655"} để nhận Acc Blockman GO ngay.`,
+        createdAt: Date.now()
+      });
+
+      document.getElementById("adm-acc-name").value = "";
+      document.getElementById("adm-acc-price").value = "";
+      document.getElementById("adm-acc-status").value = "selling";
+      document.getElementById("adm-acc-desc").value = "";
+      document.getElementById("adm-acc-url").value = "";
+      document.getElementById("adm-img-preview").innerHTML = "";
+      preloadedUploadImages = [];
+      preloadPromise = null;
+      f.value = "";
+
+      await saveAndAutoSync(`Đã đăng Acc mới (${images.length} ảnh gốc 100%)`);
+    }
+
+    function approveRv(id) {
+      const r = db.reviews.find(x => x.id === id);
+      if (r) r.approved = true;
+      saveAndAutoSync("Đã duyệt đánh giá công khai");
+    }
+
+    function delRv(id) {
+      db.reviews = (db.reviews || []).filter(x => x.id !== id);
+      saveAndAutoSync("Đã xóa đánh giá");
+    }
+
+    function setAccStatus(id, newStatus) {
+      const acc = (db.accounts || []).find(x => x.id === id);
+      if (!acc) return;
+      acc.status = newStatus || "selling";
+      const label = acc.status === "sold" ? "ĐÃ BÁN" : acc.status === "deposited" ? "ĐÃ CỌC" : "ĐANG BÁN";
+      saveAndAutoSync(`Đã cập nhật [${acc.title}] -> ${label}`);
+    }
+
+    function delAcc(id) {
+      db.accounts = (db.accounts || []).filter(x => x.id !== id);
+      delete slideIndexMap[id];
+      saveAndAutoSync("Đã xóa Acc khỏi kho");
+    }
+
+    async function updateShopCfg() {
+      const shopName = document.getElementById("adm-cfg-name").value.trim() || "TUẤN ANH BLOCKMAN GO";
+      const zaloPhone = document.getElementById("adm-cfg-phone").value.trim() || "0374132655";
+      const tiktokId = document.getElementById("adm-cfg-tiktok").value.trim().replace(/^@+/, "") || "tuananhdepzaiff";
+      const videoFileInput = document.getElementById("adm-cfg-video-file");
+      let introVideoUrl = document.getElementById("adm-cfg-video").value.trim();
+      const gscCode = document.getElementById("adm-cfg-gsc").value.trim();
+      const seoKeywords = document.getElementById("adm-cfg-seo").value.trim();
+
+      if (videoFileInput && videoFileInput.files && videoFileInput.files[0]) {
+        try {
+          introVideoUrl = await toBase64File(videoFileInput.files[0]);
+          document.getElementById("adm-cfg-video").value = introVideoUrl;
+        } catch (e) {}
+      }
+
+      db.config = {
+        ...db.config,
+        shopName,
+        zaloPhone,
+        tiktokId,
+        githubRepo: detectGithubRepoString(),
+        introVideoUrl,
+        gscCode,
+        seoKeywords
+      };
+
+      const cleanGsc = extractGscCode(gscCode);
+      db.config.gscCode = cleanGsc;
+      document.getElementById("adm-cfg-gsc").value = cleanGsc;
+
+      await saveAndAutoSync("Đã lưu cài đặt Shop & SEO");
+    }
+
+    // Tự động trích xuất mã xác minh dù chủ shop dán cả thẻ <meta ...> hay chỉ dán mã
+    function extractGscCode(raw) {
+      if (!raw) return "";
+      const s = String(raw).trim();
+      const match = s.match(/content\s*=\s*["']([^"']+)["']/i);
+      if (match && match[1]) return match[1].trim();
+      return s.replace(/^["']|["']$/g, "").trim();
+    }
+
+    function getSiteCanonicalUrl() {
+      const repo = detectGithubRepoString();
+      if (repo && repo.includes("/")) {
+        const [owner, repoName] = repo.split("/");
+        if (repoName.toLowerCase() === `${owner.toLowerCase()}.github.io`) {
+          return `https://${owner}.github.io/`;
+        }
+        return `https://${owner}.github.io/${repoName}/`;
+      }
+      if (window.location.protocol === "https:" || window.location.protocol === "http:") {
+        return window.location.origin + window.location.pathname.replace(/index\.html$/i, "");
+      }
+      return "https://tuananhshopacc.github.io/DS/";
+    }
+
+    // Đẩy trực tiếp index.html (đã gắn mã Google Search Console) + sitemap.xml + robots.txt lên GitHub ngay từ chế độ Admin
+    async function deploySeoToGithub() {
+      saveGithubCreds();
+      let g = {};
+      try { g = JSON.parse(safeGetStorage("TA_BMG_GH_TOKEN") || "{}"); } catch (e) {}
+      const token = (g.token || "").trim();
+      const repo = (g.repo || "").trim() || detectGithubRepoString();
+      const seoStatusEl = document.getElementById("seo-deploy-status");
+
+      const setSeoMsg = (msg, color) => {
+        if (seoStatusEl) {
+          seoStatusEl.style.display = "block";
+          seoStatusEl.style.color = color || "#34d399";
+          seoStatusEl.innerText = msg;
+        }
+      };
+
+      if (!token || !repo) {
+        setSeoMsg("⚠️ Bạn cần dán GitHub Token và Tên Repo (VD: tuananhshopacc/DS) ở mục 2 bên trái trước!", "#fbbf24");
+        toast("⚠️ Chưa có GitHub Token ở mục 2!");
+        return;
+      }
+
+      const rawGsc = document.getElementById("adm-cfg-gsc").value.trim();
+      const gscCode = extractGscCode(rawGsc);
+      const seoKeywords = document.getElementById("adm-cfg-seo").value.trim() || db.config.seoKeywords || "";
+      const shopName = document.getElementById("adm-cfg-name").value.trim() || db.config.shopName || "TUẤN ANH BLOCKMAN GO";
+      document.getElementById("adm-cfg-gsc").value = gscCode;
+
+      db.config = { ...db.config, shopName, gscCode, seoKeywords, githubRepo: repo };
+      db.updatedAt = Date.now();
+      await saveDbToLocalCache(db);
+
+      const siteUrl = getSiteCanonicalUrl();
+      const todayIso = new Date().toISOString().slice(0, 10);
+
+      const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n  <url>\n    <loc>${siteUrl}</loc>\n    <lastmod>${todayIso}</lastmod>\n    <changefreq>daily</changefreq>\n    <priority>1.0</priority>\n  </url>\n</urlset>\n`;
+
+      const robotsTxt = `User-agent: *\nAllow: /\nSitemap: ${siteUrl}sitemap.xml\n`;
+
+      const headers = {
+        "Authorization": `Bearer ${token}`,
+        "Accept": "application/vnd.github.v3+json",
+        "Content-Type": "application/json"
+      };
+
+      setSeoMsg("⏳ Đang đọc index.html trên GitHub và tạo sitemap.xml, robots.txt...", "#00e5ff");
+
+      try {
+        // 1. Lấy nội dung index.html hiện tại trên GitHub để cập nhật thẻ google-site-verification
+        let indexHtmlContent = "";
+        const idxRes = await fetch(`https://api.github.com/repos/${repo}/contents/index.html?t=${Date.now()}`, { headers, cache: "no-store" });
+        if (idxRes.ok) {
+          const idxMeta = await idxRes.json();
+          if (idxMeta && idxMeta.content) {
+            indexHtmlContent = base64ToUtf8(idxMeta.content);
+          } else if (idxMeta && idxMeta.sha) {
+            const bRes = await fetch(`https://api.github.com/repos/${repo}/git/blobs/${idxMeta.sha}`, {
+              headers: { ...headers, "Accept": "application/vnd.github.v3.raw" },
+              cache: "no-store"
+            });
+            if (bRes.ok) indexHtmlContent = await bRes.text();
+          }
+        }
+
+        if (indexHtmlContent) {
+          if (gscCode) {
+            if (/<meta\s+name=["']google-site-verification["'][^>]*>/i.test(indexHtmlContent)) {
+              indexHtmlContent = indexHtmlContent.replace(
+                /<meta\s+name=["']google-site-verification["'][^>]*>/i,
+                `<meta name="google-site-verification" id="meta-gsc" content="${gscCode}" />`
+              );
+            } else {
+              indexHtmlContent = indexHtmlContent.replace(
+                /<head>/i,
+                `<head>\n  <meta name="google-site-verification" id="meta-gsc" content="${gscCode}" />`
+              );
+            }
+          }
+          if (seoKeywords && /<meta\s+name=["']keywords["'][^>]*>/i.test(indexHtmlContent)) {
+            const safeKw = seoKeywords.replace(/"/g, "&quot;");
+            indexHtmlContent = indexHtmlContent.replace(
+              /<meta\s+name=["']keywords["'][^>]*>/i,
+              `<meta name="keywords" id="meta-keys" content="${safeKw}" />`
+            );
+          }
+        }
+
+        // 2. Tạo 1 commit duy nhất đẩy sitemap.xml + robots.txt + index.html + data.json
+        let deployed = false;
+        for (const branch of ["main", "master"]) {
+          const refRes = await fetch(`https://api.github.com/repos/${repo}/git/ref/heads/${branch}?t=${Date.now()}`, { headers, cache: "no-store" });
+          if (!refRes.ok) continue;
+          const refData = await refRes.json();
+          const latestCommitSha = refData && refData.object && refData.object.sha;
+          if (!latestCommitSha) continue;
+
+          const commitRes = await fetch(`https://api.github.com/repos/${repo}/git/commits/${latestCommitSha}`, { headers, cache: "no-store" });
+          if (!commitRes.ok) continue;
+          const commitData = await commitRes.json();
+          const baseTreeSha = commitData && commitData.tree && commitData.tree.sha;
+          if (!baseTreeSha) continue;
+
+          const createBlob = async (textContent) => {
+            const r = await fetch(`https://api.github.com/repos/${repo}/git/blobs`, {
+              method: "POST",
+              headers,
+              body: JSON.stringify({ content: utf8ToBase64(textContent), encoding: "base64" })
+            });
+            if (!r.ok) return null;
+            const d = await r.json();
+            return d && d.sha ? d.sha : null;
+          };
+
+          const [sitemapSha, robotsSha, dataSha, indexSha] = await Promise.all([
+            createBlob(sitemapXml),
+            createBlob(robotsTxt),
+            createBlob(JSON.stringify(db)),
+            indexHtmlContent ? createBlob(indexHtmlContent) : Promise.resolve(null)
+          ]);
+
+          const treeItems = [];
+          if (sitemapSha) treeItems.push({ path: "sitemap.xml", mode: "100644", type: "blob", sha: sitemapSha });
+          if (robotsSha) treeItems.push({ path: "robots.txt", mode: "100644", type: "blob", sha: robotsSha });
+          if (dataSha) treeItems.push({ path: "data.json", mode: "100644", type: "blob", sha: dataSha });
+          if (indexSha) treeItems.push({ path: "index.html", mode: "100644", type: "blob", sha: indexSha });
+
+          const newTreeRes = await fetch(`https://api.github.com/repos/${repo}/git/trees`, {
+            method: "POST",
+            headers,
+            body: JSON.stringify({ base_tree: baseTreeSha, tree: treeItems })
+          });
+          if (!newTreeRes.ok) continue;
+          const newTreeData = await newTreeRes.json();
+
+          const newCommitRes = await fetch(`https://api.github.com/repos/${repo}/git/commits`, {
+            method: "POST",
+            headers,
+            body: JSON.stringify({
+              message: "Cập nhật SEO Top 1 Google (index.html, sitemap.xml, robots.txt)",
+              tree: newTreeData.sha,
+              parents: [latestCommitSha]
+            })
+          });
+          if (!newCommitRes.ok) continue;
+          const newCommitData = await newCommitRes.json();
+
+          const updateRefRes = await fetch(`https://api.github.com/repos/${repo}/git/refs/heads/${branch}`, {
+            method: "PATCH",
+            headers,
+            body: JSON.stringify({ sha: newCommitData.sha, force: true })
+          });
+          if (updateRefRes.ok) {
+            if (dataSha) rememberRemoteSha(dataSha);
+            deployed = true;
+            break;
+          }
+        }
+
+        if (deployed) {
+          setSeoMsg(
+            gscCode
+              ? "✅ Đã đẩy mã xác minh Google vào index.html + tạo sitemap.xml & robots.txt lên GitHub! Đợi 1 phút rồi bấm Xác Minh ở Google Search Console."
+              : "✅ Đã tạo & đẩy sitemap.xml + robots.txt lên GitHub! Hãy dán thêm mã Google Search Console ở ô trên rồi bấm lại nút này để xác minh.",
+            "#34d399"
+          );
+          toast("🚀 Đã đẩy bộ SEO Top 1 lên GitHub thành công!");
+        } else {
+          setSeoMsg("❌ Không đẩy được lên GitHub. Kiểm tra lại GitHub Token (quyền repo) và tên Repo ở mục 2.", "#ef4444");
+          toast("❌ Lỗi đẩy SEO lên GitHub!");
+        }
+      } catch (err) {
+        setSeoMsg("❌ Lỗi kết nối GitHub API. Kiểm tra lại mạng hoặc Token.", "#ef4444");
+        toast("❌ Lỗi kết nối GitHub API!");
+      }
+    }
+
+    async function saveAndAutoSync(actionText) {
+      db.updatedAt = Date.now();
+      db.config = { ...(db.config || {}), githubRepo: detectGithubRepoString() };
+      hasCompletedInitialRemoteSync = true;
+      await saveDbToLocalCache(db);
+      safeSetStorage("TA_BMG_LOCAL_UNSYNCED", "1");
+      try {
+        if (liveSyncChannel) liveSyncChannel.postMessage({ type: "DB_UPDATED", db });
+      } catch (e) {}
+      renderAll();
+      await pushGitHub(false, actionText);
+    }
+
+    // ================= CƠ CHẾ ĐẨY GITHUB API SIÊU TỐC (TÁCH ẢNH GỐC + DATA.JSON NHẸ) =================
+    async function getExistingFileSha(repo, path, headers, forceFresh) {
+      if (!forceFresh && lastKnownRemoteSha) return lastKnownRemoteSha;
+      const bust = Date.now() + "_" + Math.random().toString(36).slice(2, 7);
+      try {
+        const treeRes = await fetch(`https://api.github.com/repos/${repo}/git/trees/HEAD?t=${bust}`, { headers, cache: "no-store" });
+        if (treeRes.ok) {
+          const treeData = await treeRes.json();
+          if (treeData && Array.isArray(treeData.tree)) {
+            const found = treeData.tree.find(item => item.path === path);
+            if (found && found.sha) {
+              rememberRemoteSha(found.sha);
+              return found.sha;
+            }
+          }
+        }
+      } catch (e) {}
+
+      try {
+        const res = await fetch(`https://api.github.com/repos/${repo}/contents/${path}?t=${bust}`, { headers, cache: "no-store" });
+        if (res.ok) {
+          const data = await res.json();
+          if (data && data.sha) {
+            rememberRemoteSha(data.sha);
+            return data.sha;
+          }
+        }
+      } catch (e) {}
+
+      return undefined;
+    }
+
+    async function uploadInlineImagesToGitBlobs(repo, branch, headers) {
+      const treeEntries = [];
+      const tasks = [];
+
+      for (const acc of (db.accounts || [])) {
+        const imgs = getAccImages(acc);
+        acc.images = [...imgs];
+        for (let idx = 0; idx < acc.images.length; idx++) {
+          const imgStr = acc.images[idx];
+          if (typeof imgStr === "string" && imgStr.startsWith("data:image/")) {
+            tasks.push({ acc, idx, imgStr });
+          }
+        }
+      }
+
+      if (tasks.length === 0) return treeEntries;
+
+      const batchSize = 4;
+      for (let i = 0; i < tasks.length; i += batchSize) {
+        const slice = tasks.slice(i, i + batchSize);
+        await Promise.all(slice.map(async (item) => {
+          const commaIdx = item.imgStr.indexOf(",");
+          if (commaIdx === -1) return;
+          const metaPart = item.imgStr.slice(0, commaIdx);
+          const b64Payload = item.imgStr.slice(commaIdx + 1).replace(/\s+/g, "");
+          let ext = "jpg";
+          if (metaPart.includes("png")) ext = "png";
+          else if (metaPart.includes("webp")) ext = "webp";
+          else if (metaPart.includes("gif")) ext = "gif";
+
+          const safeId = String(item.acc.id || "acc").replace(/[^a-zA-Z0-9_-]/g, "");
+          const stamp = item.acc.createdAt || Date.now();
+          const imgPath = `images/${safeId}_${item.idx}_${stamp}.${ext}`;
+
+          try {
+            const blobRes = await fetch(`https://api.github.com/repos/${repo}/git/blobs`, {
+              method: "POST",
+              headers,
+              body: JSON.stringify({ content: b64Payload, encoding: "base64" })
+            });
+            if (blobRes.ok) {
+              const blobData = await blobRes.json();
+              if (blobData && blobData.sha) {
+                treeEntries.push({ path: imgPath, mode: "100644", type: "blob", sha: blobData.sha });
+                const remoteUrl = `https://raw.githubusercontent.com/${repo}/${branch}/${imgPath}?sha=${blobData.sha}`;
+                localOriginalImgCache[remoteUrl] = item.imgStr;
+                item.acc.images[item.idx] = remoteUrl;
+                if (item.idx === 0) item.acc.image = remoteUrl;
+              }
+            }
+          } catch (e) {}
+        }));
+      }
+
+      return treeEntries;
+    }
+
+    async function pushViaGitDataApi(repo, headers, commitMsg) {
+      for (const branch of ["main", "master"]) {
+        try {
+          const refRes = await fetch(`https://api.github.com/repos/${repo}/git/ref/heads/${branch}?t=${Date.now()}`, { headers, cache: "no-store" });
+          if (!refRes.ok) continue;
+          const refData = await refRes.json();
+          const latestCommitSha = refData && refData.object && refData.object.sha;
+          if (!latestCommitSha) continue;
+
+          const commitRes = await fetch(`https://api.github.com/repos/${repo}/git/commits/${latestCommitSha}`, { headers, cache: "no-store" });
+          if (!commitRes.ok) continue;
+          const commitData = await commitRes.json();
+          const baseTreeSha = commitData && commitData.tree && commitData.tree.sha;
+          if (!baseTreeSha) continue;
+
+          const imageTreeItems = await uploadInlineImagesToGitBlobs(repo, branch, headers);
+          await saveDbToLocalCache(db);
+
+          const contentB64 = utf8ToBase64(JSON.stringify(db));
+          const blobRes = await fetch(`https://api.github.com/repos/${repo}/git/blobs`, {
+            method: "POST",
+            headers,
+            body: JSON.stringify({ content: contentB64, encoding: "base64" })
+          });
+          if (!blobRes.ok) continue;
+          const blobData = await blobRes.json();
+          if (!blobData || !blobData.sha) continue;
+
+          const newTreeRes = await fetch(`https://api.github.com/repos/${repo}/git/trees`, {
+            method: "POST",
+            headers,
+            body: JSON.stringify({
+              base_tree: baseTreeSha,
+              tree: [
+                ...imageTreeItems,
+                { path: "data.json", mode: "100644", type: "blob", sha: blobData.sha }
+              ]
+            })
+          });
+          if (!newTreeRes.ok) continue;
+          const newTreeData = await newTreeRes.json();
+
+          const newCommitRes = await fetch(`https://api.github.com/repos/${repo}/git/commits`, {
+            method: "POST",
+            headers,
+            body: JSON.stringify({
+              message: commitMsg,
+              tree: newTreeData.sha,
+              parents: [latestCommitSha]
+            })
+          });
+          if (!newCommitRes.ok) continue;
+          const newCommitData = await newCommitRes.json();
+
+          const updateRefRes = await fetch(`https://api.github.com/repos/${repo}/git/refs/heads/${branch}`, {
+            method: "PATCH",
+            headers,
+            body: JSON.stringify({ sha: newCommitData.sha, force: true })
+          });
+          if (updateRefRes.ok) {
+            rememberRemoteSha(blobData.sha);
+            lastKnownRemoteEtag = "";
+            return true;
+          }
+        } catch (e) {}
+      }
+      return false;
+    }
+
+    async function pushGitHub(isSilent, actionText) {
+      saveGithubCreds();
+      let g = {};
+      try { g = JSON.parse(safeGetStorage("TA_BMG_GH_TOKEN") || "{}"); } catch (e) {}
+      const token = (g.token || "").trim();
+      const repo = (g.repo || "").trim() || detectGithubRepoString();
+      const statusEl = document.getElementById("sync-status-line");
+
+      if (!token || !repo) {
+        if (statusEl) {
+          statusEl.style.color = "#fbbf24";
+          statusEl.innerText = "⚠️ Đã lưu trên máy bạn! Dán GitHub Token & Repo ở mục 2 để đồng bộ lên Web cho khách xem.";
+        }
+        if (!isSilent) {
+          toast(`✅ ${actionText || "Đã lưu"} trên máy! Dán GitHub Token ở mục 2 để đẩy lên Web.`);
+        }
+        return false;
+      }
+
+      if (isPushingGitHub) {
+        pendingPushRequest = { isSilent, actionText };
+        return true;
+      }
+
+      isPushingGitHub = true;
+      try {
+        if (statusEl) {
+          statusEl.style.color = "#00e5ff";
+          statusEl.innerText = "⚡ Đang đẩy ảnh gốc 100% & cập nhật data.json lên GitHub...";
+        }
+
+        const headers = {
+          "Authorization": `Bearer ${token}`,
+          "Accept": "application/vnd.github.v3+json",
+          "Content-Type": "application/json"
+        };
+
+        db.updatedAt = Date.now();
+        db.config = { ...(db.config || {}), githubRepo: repo };
+        await saveDbToLocalCache(db);
+
+        const commitMsg = `Cập nhật kho acc Blockman GO (${new Date().toLocaleString("vi-VN")})`;
+        let pushSuccess = false;
+        let lastErrMessage = "";
+
+        if (hasInlineBase64Images(db.accounts)) {
+          pushSuccess = await pushViaGitDataApi(repo, headers, commitMsg);
+        }
+
+        if (!pushSuccess) {
+          const contentB64 = utf8ToBase64(JSON.stringify(db));
+          if (contentB64.length <= 900000) {
+            let sha = await getExistingFileSha(repo, "data.json", headers, false);
+            for (let attempt = 0; attempt < 3; attempt++) {
+              const bodyObj = { message: commitMsg, content: contentB64 };
+              if (sha) bodyObj.sha = sha;
+
+              const putRes = await fetch(`https://api.github.com/repos/${repo}/contents/data.json`, {
+                method: "PUT",
+                headers,
+                body: JSON.stringify(bodyObj)
+              });
+
+              if (putRes.ok) {
+                const okData = await putRes.json().catch(() => ({}));
+                if (okData && okData.content && okData.content.sha) rememberRemoteSha(okData.content.sha);
+                lastKnownRemoteEtag = "";
+                pushSuccess = true;
+                break;
+              }
+
+              const errData = await putRes.json().catch(() => ({}));
+              lastErrMessage = errData.message || String(putRes.status);
+              const shaMatch = lastErrMessage.match(/([a-f0-9]{40})/i);
+              if (shaMatch && shaMatch[1] && shaMatch[1] !== sha) {
+                sha = shaMatch[1];
+                rememberRemoteSha(sha);
+                continue;
+              }
+              if (putRes.status === 409 || putRes.status === 422) {
+                sha = await getExistingFileSha(repo, "data.json", headers, true);
+                continue;
+              }
+              break;
+            }
+          }
+        }
+
+        if (!pushSuccess) {
+          pushSuccess = await pushViaGitDataApi(repo, headers, commitMsg);
+        }
+
+        if (pushSuccess) {
+          lastPushedUpdatedAt = db.updatedAt;
+          safeSetStorage("TA_BMG_LOCAL_UNSYNCED", "0");
+          await saveDbToLocalCache(db);
+          try {
+            if (liveSyncChannel) liveSyncChannel.postMessage({ type: "DB_UPDATED", db });
+          } catch (e) {}
+          renderAll();
+          if (statusEl) {
+            statusEl.style.color = "#34d399";
+            statusEl.innerText = "✅ Đồng bộ GitHub thành công! Mọi người vào web thấy ngay lập tức.";
+          }
+          if (!isSilent) toast(`✅ ${actionText || "Đã cập nhật"} & đồng bộ lên GitHub thành công!`);
+          return true;
+        } else {
+          if (statusEl) {
+            statusEl.style.color = "#ef4444";
+            statusEl.innerText = "❌ Lỗi đồng bộ GitHub: " + lastErrMessage;
+          }
+          if (!isSilent) toast("❌ Lỗi đẩy GitHub: " + lastErrMessage);
+          return false;
+        }
+      } catch (err) {
+        if (statusEl) {
+          statusEl.style.color = "#ef4444";
+          statusEl.innerText = "❌ Không thể kết nối GitHub API. Kiểm tra mạng hoặc Token.";
+        }
+        if (!isSilent) toast("❌ Lỗi kết nối tới GitHub API!");
+        return false;
+      } finally {
+        isPushingGitHub = false;
+        if (pendingPushRequest) {
+          const nextReq = pendingPushRequest;
+          pendingPushRequest = null;
+          setTimeout(() => pushGitHub(nextReq.isSilent, nextReq.actionText), 150);
+        }
+      }
+    }
+
+    let toastTimeout = null;
+    function toast(msg) {
+      const box = document.getElementById("msg-toast");
+      if (!box) return;
+      box.innerText = msg;
+      box.style.display = "block";
+      if (toastTimeout) clearTimeout(toastTimeout);
+      toastTimeout = setTimeout(() => { box.style.display = "none"; }, 3600);
+    }
+
+    function esc(str) {
+      if (str === null || str === undefined) return "";
+      return String(str)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#39;");
+    }
+
+    // ================= ĐỘNG CƠ 3D VOXEL BLOCKMAN GO (THREE.JS r128) =================
+    let voxelState = {
+      target: "overview",
+      warpSpeed: 1,
+      pure3D: false,
+      rotYaw: 0.45,
+      rotPitch: 0.36,
+      zoomDist: 44,
+      isDragging: false,
+      lastX: 0,
+      lastY: 0
+    };
+
+    const VOXEL_LABELS = {
+      overview: "Đang ngắm: Toàn Cảnh Đảo Block 3D (Kéo chuột để xoay 360°)",
+      bedwars: "Đang ngắm: Đảo Bed Wars 3D (Giường Đỏ Phát Sáng & Máy Tạo Ngọc Lục Bảo)",
+      skyblock: "Đang ngắm: Đảo Sky Block 3D (Cỏ Xanh, Cây Voxel & Khối Kim Cương)",
+      gcubes: "Đang ngắm: Cụm Tinh Thể Gcubes Vàng Quỹ Đạo 3D"
+    };
+
+    function setVoxelTarget(targetKey) {
+      voxelState.target = targetKey;
+      ["overview", "bedwars", "skyblock", "gcubes"].forEach(k => {
+        const el = document.getElementById("cam-btn-" + k);
+        if (el) el.classList.toggle("active", k === targetKey);
+      });
+      const lbl = document.getElementById("voxel-target-label");
+      if (lbl && VOXEL_LABELS[targetKey]) lbl.innerText = VOXEL_LABELS[targetKey];
+
+      if (targetKey === "overview") {
+        voxelState.zoomDist = 44;
+        voxelState.rotPitch = 0.36;
+      } else {
+        voxelState.zoomDist = 18;
+        voxelState.rotPitch = 0.28;
+      }
+    }
+
+    function toggleVoxelWarp() {
+      voxelState.warpSpeed = voxelState.warpSpeed === 1 ? 4 : 1;
+      const btn = document.getElementById("cam-btn-warp");
+      if (btn) {
+        btn.innerText = voxelState.warpSpeed > 1 ? "⚡ Tốc Độ: x4" : "⚡ Tốc Độ: x1";
+        btn.classList.toggle("active", voxelState.warpSpeed > 1);
+      }
+    }
+
+    function togglePure3DMode() {
+      voxelState.pure3D = !voxelState.pure3D;
+      document.body.classList.toggle("pure-3d-mode", voxelState.pure3D);
+      const btn = document.getElementById("btn-pure-3d");
+      if (btn) {
+        btn.innerText = voxelState.pure3D ? "🛒 Quay Lại Shop Acc" : "🔭 Ngắm 3D Toàn Màn Hình";
+      }
+      if (voxelState.pure3D) {
+        toast("🧊 Chế độ 3D Blockman GO: Kéo chuột/chạm xoay 360°, lăn chuột để phóng to!");
+      }
+    }
+
+    let voxelInitialized = false;
+    function initVoxel3D() {
+      if (voxelInitialized) return;
+      const canvas = document.getElementById("voxel-3d-canvas");
+      if (!canvas) return;
+      voxelInitialized = true;
+
+      const onPointerDown = (x, y) => {
+        voxelState.isDragging = true;
+        voxelState.lastX = x;
+        voxelState.lastY = y;
+      };
+      const onPointerMove = (x, y) => {
+        if (!voxelState.isDragging) return;
+        const dx = x - voxelState.lastX;
+        const dy = y - voxelState.lastY;
+        voxelState.lastX = x;
+        voxelState.lastY = y;
+        voxelState.rotYaw -= dx * 0.006;
+        voxelState.rotPitch = Math.max(-0.9, Math.min(1.2, voxelState.rotPitch + dy * 0.005));
+      };
+      const onPointerUp = () => { voxelState.isDragging = false; };
+
+      window.addEventListener("mousedown", e => {
+        if (e.target === canvas || voxelState.pure3D) onPointerDown(e.clientX, e.clientY);
+      });
+      window.addEventListener("mousemove", e => onPointerMove(e.clientX, e.clientY));
+      window.addEventListener("mouseup", onPointerUp);
+
+      window.addEventListener("touchstart", e => {
+        if (e.touches.length === 1 && (e.target === canvas || voxelState.pure3D)) {
+          onPointerDown(e.touches[0].clientX, e.touches[0].clientY);
+        }
+      }, { passive: true });
+      window.addEventListener("touchmove", e => {
+        if (e.touches.length === 1 && voxelState.isDragging) {
+          onPointerMove(e.touches[0].clientX, e.touches[0].clientY);
+        }
+      }, { passive: true });
+      window.addEventListener("touchend", onPointerUp);
+
+      canvas.addEventListener("wheel", e => {
+        e.preventDefault();
+        voxelState.zoomDist = Math.max(10, Math.min(82, voxelState.zoomDist + e.deltaY * 0.025));
+      }, { passive: false });
+
+      if (typeof THREE === "undefined") {
+        initFallback2DVoxel(canvas);
+        return;
+      }
+
+      let renderer;
+      try {
+        renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
+      } catch (err) {
+        initFallback2DVoxel(canvas);
+        return;
+      }
+
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+      renderer.setSize(window.innerWidth, window.innerHeight);
+
+      const scene = new THREE.Scene();
+      const camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 0.1, 600);
+
+      // Ánh sáng thế giới Voxel rực rỡ
+      scene.add(new THREE.AmbientLight(0x88b4e8, 0.95));
+      const dirLight = new THREE.DirectionalLight(0xffffff, 1.15);
+      dirLight.position.set(22, 36, 18);
+      scene.add(dirLight);
+
+      const emeraldLight = new THREE.PointLight(0x10b981, 2.5, 90);
+      emeraldLight.position.set(-14, 10, 6);
+      scene.add(emeraldLight);
+
+      const goldLight = new THREE.PointLight(0xfbbf24, 2.2, 90);
+      goldLight.position.set(16, 12, -8);
+      scene.add(goldLight);
+
+      // Hàm dựng 1 khối vuông Voxel nhanh
+      function makeBox(w, h, d, colorHex, emissiveHex = 0x000000, emissiveIntensity = 0) {
+        return new THREE.Mesh(
+          new THREE.BoxGeometry(w, h, d),
+          new THREE.MeshStandardMaterial({
+            color: colorHex,
+            emissive: emissiveHex,
+            emissiveIntensity,
+            roughness: 0.45,
+            metalness: 0.12
+          })
+        );
+      }
+
+      // ================= 1. ĐẢO TRUNG TÂM & CỤM TINH THỂ GCUBES =================
+      const gcubesGroup = new THREE.Group();
+      scene.add(gcubesGroup);
+
+      // Đế đảo tinh thể ở tâm
+      const centerBase = makeBox(6, 1.4, 6, 0x1e293b);
+      centerBase.position.y = -2.2;
+      gcubesGroup.add(centerBase);
+      const centerCore = makeBox(4, 1.8, 4, 0x0f172a);
+      centerCore.position.y = -3.8;
+      gcubesGroup.add(centerCore);
+
+      // Tinh thể Gcubes khổng lồ xoay ở trung tâm
+      const mainGcube = new THREE.Mesh(
+        new THREE.OctahedronGeometry(2.6, 0),
+        new THREE.MeshStandardMaterial({
+          color: 0xfbbf24,
+          emissive: 0xd97706,
+          emissiveIntensity: 0.55,
+          roughness: 0.2,
+          metalness: 0.65
+        })
+      );
+      mainGcube.position.y = 2.4;
+      gcubesGroup.add(mainGcube);
+
+      // Vòng năng lượng cyan quanh Gcubes
+      const gRing = new THREE.Mesh(
+        new THREE.TorusGeometry(4.2, 0.12, 12, 48),
+        new THREE.MeshBasicMaterial({ color: 0x00e5ff, transparent: true, opacity: 0.65 })
+      );
+      gRing.position.y = 2.4;
+      gRing.rotation.x = Math.PI / 2.4;
+      gcubesGroup.add(gRing);
+
+      // Các khối Gcubes nhỏ bay quỹ đạo xung quanh
+      const orbitGcubes = [];
+      for (let i = 0; i < 8; i++) {
+        const mini = new THREE.Mesh(
+          new THREE.OctahedronGeometry(0.75, 0),
+          new THREE.MeshStandardMaterial({
+            color: i % 2 === 0 ? 0xfbbf24 : 0x00e5ff,
+            emissive: i % 2 === 0 ? 0xf59e0b : 0x0284c7,
+            emissiveIntensity: 0.5,
+            roughness: 0.25,
+            metalness: 0.5
+          })
+        );
+        gcubesGroup.add(mini);
+        orbitGcubes.push({
+          mesh: mini,
+          angle: (i / 8) * Math.PI * 2,
+          radius: 7.5 + (i % 2) * 2.2,
+          yOff: 1.5 + (i % 3) * 1.1
+        });
+      }
+
+      // ================= 2. ĐẢO BED WARS (GIƯỜNG ĐỎ + MÁY TẠO NGỌC LỤC BẢO) =================
+      const bedwarsIsland = new THREE.Group();
+      bedwarsIsland.position.set(-16, 1.5, 8);
+      scene.add(bedwarsIsland);
+
+      // Nền đảo đá & cỏ Bed Wars
+      const bwTop = makeBox(9, 1.2, 9, 0x10b981);
+      bedwarsIsland.add(bwTop);
+      const bwMid = makeBox(7.2, 1.8, 7.2, 0x475569);
+      bwMid.position.y = -1.5;
+      bedwarsIsland.add(bwMid);
+      const bwBot = makeBox(4.4, 2.0, 4.4, 0x334155);
+      bwBot.position.y = -3.4;
+      bedwarsIsland.add(bwBot);
+
+      // Giường đỏ Bed Wars phát sáng
+      const bedFrame = makeBox(2.4, 0.5, 4.2, 0x92400e);
+      bedFrame.position.set(-1.4, 0.85, 0);
+      bedwarsIsland.add(bedFrame);
+      const bedBlanket = makeBox(2.2, 0.45, 2.8, 0xef4444, 0xfe2c55, 0.55);
+      bedBlanket.position.set(-1.4, 1.25, 0.55);
+      bedwarsIsland.add(bedBlanket);
+      const bedPillow = makeBox(2.0, 0.42, 1.0, 0xf8fafc, 0xffffff, 0.2);
+      bedPillow.position.set(-1.4, 1.26, -1.35);
+      bedwarsIsland.add(bedPillow);
+
+      // Máy tạo ngọc lục bảo (Emerald Generator)
+      const genBase = makeBox(2.2, 0.7, 2.2, 0x065f46);
+      genBase.position.set(2.3, 0.95, -1.2);
+      bedwarsIsland.add(genBase);
+      const emeraldGem = new THREE.Mesh(
+        new THREE.OctahedronGeometry(1.1, 0),
+        new THREE.MeshStandardMaterial({
+          color: 0x34d399,
+          emissive: 0x10b981,
+          emissiveIntensity: 0.75,
+          roughness: 0.15,
+          metalness: 0.4
+        })
+      );
+      emeraldGem.position.set(2.3, 2.8, -1.2);
+      bedwarsIsland.add(emeraldGem);
+
+      // Khối len bảo vệ giường
+      const wool1 = makeBox(1.4, 1.4, 1.4, 0xfe2c55);
+      wool1.position.set(1.2, 1.3, 2.4);
+      bedwarsIsland.add(wool1);
+      const wool2 = makeBox(1.4, 1.4, 1.4, 0xfbbf24);
+      wool2.position.set(2.7, 1.3, 2.4);
+      bedwarsIsland.add(wool2);
+
+      // ================= 3. ĐẢO SKY BLOCK (CỎ XANH + CÂY VOXEL + KHỐI KIM CƯƠNG) =================
+      const skyblockIsland = new THREE.Group();
+      skyblockIsland.position.set(17, 3.2, -9);
+      scene.add(skyblockIsland);
+
+      const sbGrass = makeBox(8.5, 1.1, 8.5, 0x22c55e);
+      skyblockIsland.add(sbGrass);
+      const sbDirt = makeBox(6.8, 1.9, 6.8, 0x78350f);
+      sbDirt.position.y = -1.5;
+      skyblockIsland.add(sbDirt);
+      const sbStone = makeBox(4.2, 2.0, 4.2, 0x475569);
+      sbStone.position.y = -3.4;
+      skyblockIsland.add(sbStone);
+
+      // Cây Voxel Sky Block
+      const trunk = makeBox(1.2, 4.2, 1.2, 0x92400e);
+      trunk.position.set(-1.6, 2.6, -1.2);
+      skyblockIsland.add(trunk);
+      const leaves1 = makeBox(4.4, 1.6, 4.4, 0x10b981);
+      leaves1.position.set(-1.6, 5.1, -1.2);
+      skyblockIsland.add(leaves1);
+      const leaves2 = makeBox(2.6, 1.4, 2.6, 0x34d399);
+      leaves2.position.set(-1.6, 6.5, -1.2);
+      skyblockIsland.add(leaves2);
+
+      // Cụm khối Kim Cương & Rương Sky Block
+      const diaBlock1 = makeBox(1.6, 1.6, 1.6, 0x00e5ff, 0x00e5ff, 0.45);
+      diaBlock1.position.set(2.2, 1.35, 1.6);
+      skyblockIsland.add(diaBlock1);
+      const diaBlock2 = makeBox(1.4, 1.4, 1.4, 0x38bdf8, 0x0284c7, 0.35);
+      diaBlock2.position.set(2.2, 2.85, 1.6);
+      skyblockIsland.add(diaBlock2);
+      const chestBlock = makeBox(1.7, 1.2, 1.2, 0xf59e0b, 0xd97706, 0.25);
+      chestBlock.position.set(1.8, 1.15, -2.0);
+      skyblockIsland.add(chestBlock);
+
+      // ================= 4. HẠT BỤI KHỐI VUÔNG PIXEL BAY LƠ LỬNG =================
+      const dustCount = 1200;
+      const dustGeo = new THREE.BufferGeometry();
+      const dustPos = new Float32Array(dustCount * 3);
+      const dustCol = new Float32Array(dustCount * 3);
+      for (let i = 0; i < dustCount; i++) {
+        dustPos[i * 3] = (Math.random() - 0.5) * 140;
+        dustPos[i * 3 + 1] = (Math.random() - 0.5) * 90;
+        dustPos[i * 3 + 2] = (Math.random() - 0.5) * 140;
+        const pick = Math.random();
+        if (pick < 0.3) {
+          dustCol[i * 3] = 0.06; dustCol[i * 3 + 1] = 0.72; dustCol[i * 3 + 2] = 0.5;
+        } else if (pick < 0.6) {
+          dustCol[i * 3] = 0.0; dustCol[i * 3 + 1] = 0.9; dustCol[i * 3 + 2] = 1.0;
+        } else if (pick < 0.85) {
+          dustCol[i * 3] = 0.98; dustCol[i * 3 + 1] = 0.75; dustCol[i * 3 + 2] = 0.14;
+        } else {
+          dustCol[i * 3] = 1.0; dustCol[i * 3 + 1] = 0.17; dustCol[i * 3 + 2] = 0.33;
+        }
+      }
+      dustGeo.setAttribute("position", new THREE.BufferAttribute(dustPos, 3));
+      dustGeo.setAttribute("color", new THREE.BufferAttribute(dustCol, 3));
+      const dustPoints = new THREE.Points(
+        dustGeo,
+        new THREE.PointsMaterial({ size: 0.65, vertexColors: true, transparent: true, opacity: 0.82 })
+      );
+      scene.add(dustPoints);
+
+      window.addEventListener("resize", () => {
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+      });
+
+      const currentLookAt = new THREE.Vector3(0, 1, 0);
+      const desiredLookAt = new THREE.Vector3(0, 1, 0);
+      let tick = 0;
+
+      function animateVoxel() {
+        requestAnimationFrame(animateVoxel);
+        const mult = voxelState.warpSpeed;
+        tick += 0.015 * mult;
+
+        // Xoay tinh thể Gcubes & Ngọc lục bảo Bed Wars
+        mainGcube.rotation.y += 0.018 * mult;
+        mainGcube.rotation.x += 0.008 * mult;
+        mainGcube.position.y = 2.4 + Math.sin(tick * 1.6) * 0.45;
+        gRing.rotation.z -= 0.015 * mult;
+
+        emeraldGem.rotation.y += 0.03 * mult;
+        emeraldGem.position.y = 2.8 + Math.sin(tick * 2.2) * 0.35;
+
+        // Nhấp nhô nhẹ các hòn đảo lơ lửng
+        bedwarsIsland.position.y = 1.5 + Math.sin(tick * 1.1) * 0.55;
+        skyblockIsland.position.y = 3.2 + Math.cos(tick * 1.0) * 0.55;
+
+        // Quay các khối Gcubes vệ tinh
+        orbitGcubes.forEach(item => {
+          item.angle += 0.012 * mult;
+          item.mesh.position.set(
+            Math.cos(item.angle) * item.radius,
+            item.yOff + Math.sin(tick * 2 + item.angle) * 0.6,
+            Math.sin(item.angle) * item.radius
+          );
+          item.mesh.rotation.y += 0.025 * mult;
+        });
+
+        dustPoints.rotation.y += 0.0007 * mult;
+
+        if (!voxelState.isDragging) {
+          voxelState.rotYaw += 0.0018 * (mult > 1 ? 2.2 : 1);
+        }
+
+        if (voxelState.target === "bedwars") {
+          desiredLookAt.copy(bedwarsIsland.position);
+        } else if (voxelState.target === "skyblock") {
+          desiredLookAt.copy(skyblockIsland.position);
+        } else if (voxelState.target === "gcubes") {
+          desiredLookAt.set(0, 2.2, 0);
+        } else {
+          desiredLookAt.set(0, 1.5, 0);
+        }
+
+        currentLookAt.lerp(desiredLookAt, 0.06);
+
+        const r = voxelState.zoomDist;
+        const cx = currentLookAt.x + r * Math.cos(voxelState.rotPitch) * Math.sin(voxelState.rotYaw);
+        const cy = currentLookAt.y + r * Math.sin(voxelState.rotPitch);
+        const cz = currentLookAt.z + r * Math.cos(voxelState.rotPitch) * Math.cos(voxelState.rotYaw);
+
+        camera.position.lerp(new THREE.Vector3(cx, cy, cz), 0.08);
+        camera.lookAt(currentLookAt);
+
+        renderer.render(scene, camera);
+      }
+
+      animateVoxel();
+    }
+
+    // Dự phòng 2D Canvas nếu thiết bị tắt WebGL
+    function initFallback2DVoxel(canvas) {
+      const ctx = canvas.getContext("2d");
+      if (!ctx) return;
+      let t = 0;
+      const cubes = Array.from({ length: 36 }, (_, i) => ({
+        x: Math.random(),
+        y: Math.random(),
+        s: 10 + (i % 5) * 6,
+        sp: 0.0006 + (i % 4) * 0.0003,
+        col: i % 3 === 0 ? "#10b981" : i % 3 === 1 ? "#00e5ff" : "#fbbf24"
+      }));
+      function resize2D() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+      }
+      resize2D();
+      window.addEventListener("resize", resize2D);
+      function draw2D() {
+        requestAnimationFrame(draw2D);
+        t += 0.02 * voxelState.warpSpeed;
+        ctx.fillStyle = "#060b17";
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        cubes.forEach(c => {
+          c.y -= c.sp * voxelState.warpSpeed;
+          if (c.y < -0.05) c.y = 1.05;
+          ctx.fillStyle = c.col + "55";
+          ctx.strokeStyle = c.col;
+          ctx.lineWidth = 1.5;
+          const px = c.x * canvas.width;
+          const py = c.y * canvas.height;
+          ctx.fillRect(px, py, c.s, c.s);
+          ctx.strokeRect(px, py, c.s, c.s);
+        });
+      }
+      draw2D();
+    }
+
+    // Khởi chạy dữ liệu & nền 3D Voxel ngay lập tức
+    loadData();
+    initVoxel3D();
+    window.addEventListener("DOMContentLoaded", () => {
+      loadData();
+      initVoxel3D();
+    });
+  </script>
+</body>
+</html>
